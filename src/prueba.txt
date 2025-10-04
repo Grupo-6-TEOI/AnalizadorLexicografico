@@ -1,0 +1,5 @@
+numero = 2
+cont = 0
+FOR al IS RANGE [numero*2+8] {STEP 2}
+    cont = cont + 1
+NEXT al
