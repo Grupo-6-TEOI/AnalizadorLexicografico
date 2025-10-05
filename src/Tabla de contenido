@@ -22,8 +22,9 @@ cadenaLarga                       ID          -                                 
 5                                 CONST_INT   5                                 -
 "El numero es mayor a 5"          CONST_STR   El numero es mayor a 5           22
 "El numero es menor o igual a 5"  CONST_STR   El numero es menor o igual a 5   29
-99.0                              CONST_REAL  99.0                             -
-0.9999                            CONST_REAL  0.9999                           -
+99.9                              CONST_REAL  99.0                             -
+.9999                             CONST_REAL  0.9999                           -
+.25                               CONST_REAL  0.25                             -
 32767                             CONST_INT   32767                            -
 123.456                           CONST_REAL  123.456                          -
 "HOLA MUNDO"                      CONST_STR   HOLA MUNDO                      10
