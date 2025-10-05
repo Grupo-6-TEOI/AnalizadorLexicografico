@@ -11,6 +11,8 @@ public class GuiAnalizador {
     private JPanel areaTexto;
     private JPanel ventana;
     private JScrollPane scrollInput;
+    private JTextArea output;
+    private JScrollPane scrollOutput;
     Lexico lexer;
 
     public GuiAnalizador(){
@@ -26,11 +28,16 @@ public class GuiAnalizador {
     private void ingresarTexto(){
         try {
             Reader reader = new StringReader(input.getText());
-            lexer = new Lexico(reader);
+            lexer = new Lexico(reader, this);
+            output.setText("");
             lexer.next_token();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void mostrarTexto(String texto){
+        output.setText(output.getText() + texto + "\n");
     }
 
     public JPanel getVentana(){

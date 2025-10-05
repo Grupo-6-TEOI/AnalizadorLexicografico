@@ -10,13 +10,14 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        try {
+        /*try {
+
             FileReader f = new FileReader("C:\\Users\\facun\\IdeaProjects\\TrabajoIntegradorTEOI\\src\\prueba.txt");
             Lexico Lexer = new Lexico(f);
             Lexer.next_token();
         } catch (FileNotFoundException var3) {
             System.out.println("No se encontró el archivo");
         }
-
+        */
     }
 }

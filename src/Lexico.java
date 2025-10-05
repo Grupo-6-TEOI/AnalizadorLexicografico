@@ -332,14 +332,16 @@ public class Lexico implements java_cup.runtime.Scanner {
   /** Whether the user-EOF-code has already been executed. */
   private boolean zzEOFDone;
 
-
+  private GuiAnalizador guiAnalizador;
   /**
    * Creates a new scanner
    *
    * @param   in  the java.io.Reader to read input from.
    */
-  public Lexico(java.io.Reader in) {
+  public Lexico(java.io.Reader in, GuiAnalizador guiAnalizador) {
     this.zzReader = in;
+    this.guiAnalizador = guiAnalizador;
+
   }
 
 
@@ -769,147 +771,147 @@ public class Lexico implements java_cup.runtime.Scanner {
           // fall through
           case 40: break;
           case 3:
-            { System.out.println("Token NOT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token NOT encontrado, Lexema "+ yytext());
             }
           // fall through
           case 41: break;
           case 4:
-            { System.out.println("Token MOD encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MOD encontrado, Lexema "+ yytext());
             }
           // fall through
           case 42: break;
           case 5:
-            { System.out.println("Token PAREN_A encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token PAREN_A encontrado, Lexema "+ yytext());
             }
           // fall through
           case 43: break;
           case 6:
-            { System.out.println("Token PAREN_C encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token PAREN_C encontrado, Lexema "+ yytext());
             }
           // fall through
           case 44: break;
           case 7:
-            { System.out.println("Token MULT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
             }
           // fall through
           case 45: break;
           case 8:
-            { System.out.println("Token SUMA encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token SUMA encontrado, Lexema "+ yytext());
             }
           // fall through
           case 46: break;
           case 9:
-            { System.out.println("Token COMA encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token COMA encontrado, Lexema "+ yytext());
             }
           // fall through
           case 47: break;
           case 10:
-            { System.out.println("Token PUNTO encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token PUNTO encontrado, Lexema "+ yytext());
             }
           // fall through
           case 48: break;
           case 11:
-            { System.out.println("Token DIV encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token DIV encontrado, Lexema "+ yytext());
             }
           // fall through
           case 49: break;
           case 12:
-            { System.out.println("Token CONST_INT, encontrado Lexema "+ yytext()); /* recordar que no debe exceder los 16 bits 0 < entero < 32768 */
+            { guiAnalizador.mostrarTexto("Token CONST_INT, encontrado Lexema "+ yytext());
             }
           // fall through
           case 50: break;
           case 13:
-            { System.out.println("Token MENOR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MENOR encontrado, Lexema "+ yytext());
             }
           // fall through
           case 51: break;
           case 14:
-            { System.out.println("Token ASIGN encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token ASIGN encontrado, Lexema "+ yytext());
             }
           // fall through
           case 52: break;
           case 15:
-            { System.out.println("Token MAYOR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MAYOR encontrado, Lexema "+ yytext());
             }
           // fall through
           case 53: break;
           case 16:
-            { System.out.println("Token ID encontrado, Lexema "+ yytext()); /* recordar colocarlo luego de las palabras reservadas porque si se coloca antes va a reconocer la palabra como ID */
+            { guiAnalizador.mostrarTexto("Token ID encontrado, Lexema "+ yytext());
             }
           // fall through
           case 54: break;
           case 17:
-            { System.out.println("Token CLASP_A encontrado, Lexema "+ yytext());
+            {guiAnalizador.mostrarTexto("Token CLASP_A encontrado, Lexema "+ yytext());
             }
           // fall through
           case 55: break;
           case 18:
-            { System.out.println("Token CLASP_C encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token CLASP_C encontrado, Lexema "+ yytext());
             }
           // fall through
           case 56: break;
           case 19:
-            { System.out.println("Token POT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token POT encontrado, Lexema "+ yytext());
             }
           // fall through
           case 57: break;
           case 20:
-            { System.out.println("Token KEY_A encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token KEY_A encontrado, Lexema "+ yytext());
             }
           // fall through
           case 58: break;
           case 21:
-            { System.out.println("Token KEY_C encontrado, Lexema "+ yytext());
+            {guiAnalizador.mostrarTexto("Token KEY_C encontrado, Lexema "+ yytext());
             }
           // fall through
           case 59: break;
           case 22:
-            { System.out.println("Token DISTINTO encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
             }
           // fall through
           case 60: break;
           case 23:
-            { System.out.println("Token CONST_STR, encontrado Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token CONST_STR, encontrado Lexema "+ yytext());
             }
           // fall through
           case 61: break;
           case 24:
-            { System.out.println("Token MASIGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MASIGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 62: break;
           case 25:
-            { System.out.println("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 63: break;
           case 26:
-            { System.out.println("Token IGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token IGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 64: break;
           case 27:
-            { System.out.println("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 65: break;
           case 28:
-            { System.out.println("Token PR_IS encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_IS encontrado, Lexema "+yytext());
             }
           // fall through
           case 66: break;
           case 29:
-            { System.out.println("Token PR_IF encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+yytext());
             }
           // fall through
           case 67: break;
           case 30:
-            { System.out.println("Token PR_FOR encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+yytext());
             }
           // fall through
           case 68: break;
           case 31:
-            { System.out.println("Token PR_INT encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+yytext());
             }
           // fall through
           case 69: break;
@@ -919,32 +921,32 @@ public class Lexico implements java_cup.runtime.Scanner {
           // fall through
           case 70: break;
           case 33:
-            { System.out.println("Token PR_NEXT encontrado, Lexema "+yytext());
+            {guiAnalizador.mostrarTexto("Token PR_NEXT encontrado, Lexema "+yytext());
             }
           // fall through
           case 71: break;
           case 34:
-            { System.out.println("Token PR_STEP encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_STEP encontrado, Lexema "+yytext());
             }
           // fall through
           case 72: break;
           case 35:
-            { System.out.println("Token PR_ELSE encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_ELSE encontrado, Lexema "+yytext());
             }
           // fall through
           case 73: break;
           case 36:
-            { System.out.println("Token PR_RANGE encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_RANGE encontrado, Lexema "+yytext());
             }
           // fall through
           case 74: break;
           case 37:
-            { System.out.println("Token PR_FLOAT encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+yytext());
             }
           // fall through
           case 75: break;
           case 38:
-            { System.out.println("Token PR_WHILE encontrado, Lexema "+yytext());
+            { guiAnalizador.mostrarTexto("Token PR_WHILE encontrado, Lexema "+yytext());
             }
           // fall through
           case 76: break;
