@@ -1,0 +1,40 @@
+NOMBRE                           TOKEN       VALOR                         LONGITUD
+------                           -----       -----                         --------
+numero                            ID          -                                 -
+cont                              ID          -                                 -
+al                                ID          -                                 -
+a1                                ID          -                                 -
+b2                                ID          -                                 -
+texto                             ID          -                                 -
+hexVar                            ID          -                                 -
+valorReal                         ID          -                                 -
+cadenaLarga                       ID          -                                 -
+2                                 CONST_INT   2                                 -
+0                                 CONST_INT   0                                 -
+8                                 CONST_INT   8                                 -
+1                                 CONST_INT   1                                 -
+25.75                             CONST_REAL  25.75                             -
+100                               CONST_INT   100                               -
+"Hola Mundo"                      CONST_STR   Hola Mundo                        11
+0hFF                              CONST_HEX   255                               -
+99999.99                          CONST_REAL  99999.99                          -
+"@sdADaSjfla%dfg"                 CONST_STR   @sdADaSjfla%dfg                  15
+5                                 CONST_INT   5                                 -
+"El numero es mayor a 5"          CONST_STR   El numero es mayor a 5           22
+"El numero es menor o igual a 5"  CONST_STR   El numero es menor o igual a 5   29
+99.0                              CONST_REAL  99.0                             -
+0.9999                            CONST_REAL  0.9999                           -
+32767                             CONST_INT   32767                            -
+123.456                           CONST_REAL  123.456                          -
+"HOLA MUNDO"                      CONST_STR   HOLA MUNDO                      10
+"Cadena de 30 caracteres max"     CONST_STR   Cadena de 30 caracteres max     28
+0hA3F                             CONST_HEX   2623                            -
+0h1B                              CONST_HEX   27                              -
+0hFF                              CONST_HEX   255                             -
+"ewr"                             CONST_STR   ewr                             3
+99.999                            CONST_REAL  99.999                          -
+50                                CONST_INT   50                              -
+10                                CONST_INT   10                              -
+"Condicion compleja verdadera"    CONST_STR   Condicion compleja verdadera   29
+"Condicion compleja falsa"        CONST_STR   Condicion compleja falsa       25
+1                                 CONST_INT   
