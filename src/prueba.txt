@@ -1,77 +1,26 @@
+$*Caso Especial*$
 
 numero = 2
 cont = 0
 FOR al IS RANGE [numero*2+8] {STEP 2}
     cont = cont + 1
-
-NEXT al
-$* DECLARACIONES *$
-DECVAR
-numero : INT
-cont : INT
-a1 : FLOAT
-b2 : INT
-texto : STRING
-hexVar : INT
-valorReal : FLOAT
-cadenaLarga : STRING
-ENDDECVAR
-
-PROGRAM.SECTION
-$* ASIGNACIONES SIMPLES *$
-numero = 2
-cont = 0
-a1 = 25.75
-b2 = 100
-texto = "Hola Mundo"
-hexVar = 0hFF
-valorReal = 99999.99
-cadenaLarga = "@sdADaSjfla%dfg"
-
-$* REPEAT *$
-FOR al IS RANGE [numero * 2 + 8] {STEP 2}
-    cont = cont + 1
 NEXT al
 
-$* DECISIONES *$
-IF (numero > 5)
-    texto = "El numero es mayor a 5"
+$*Decisiones*$
+
+IF [numero == 2] THEN
+	numero = 3
 ELSE
-    texto = "El numero es menor o igual a 5"
-ENDIF
+	numero = 2
 
-$* TIPOS DE DATOS *$
-a1 = 99.
-a1 = .9999
-a1 = 32767
-a1 = 123.456
-texto = "HOLA MUNDO"
-cadenaLarga = "Cadena de 30 caracteres max"
-hexVar = 0hA3F
-hexVar = 0h1B
-hexVar = 0hFF
+$* TIPO DE DATOS *$
 
-$* COMENTARIOS*$
-$* Este es un comentario $* anidado en un nivel *$ que continua *$
+numeroEntero = 5
+numeroReal1 = 5.555
+numeroReal2 = 0.444
 
-$* SALIDA *$
-show "ewr"
-show 99.999
-show numero
+$* CONSTANTES STRING *$
 
-$* CONDICIONES *$
-IF ((b2 >= 50) && (numero < 10))
-    texto = "Condicion compleja verdadera"
-ELSE
-    texto = "Condicion compleja falsa"
-ENDIF
-
-$* REPEAT *$
-REPEAT
-    cont = cont + 1
-    numero = numero - 1
-UNTIL (numero <= 0)
-
-ENDPROGRAM.SECTION
-
+show “@sdADaSjfla%dfg”
+var := "HOLA MUNDO"
 

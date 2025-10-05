@@ -21,8 +21,8 @@ ESPACIO = [ \t\f\n\r\n]+
 ID = {LETRA} ({LETRA}|{DIGITO}|_)*
 CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
 CONST_INT = {DIGITO}+
-CONST_REAL = ({DIGITO}+\.{DIGITO}*|{DIGITO}*\.{DIGITO}+)
-CONST_HEX = 0h ({DIGITO}|[A-F])
+CONST_REAL = ({DIGITO}+"."{DIGITO}* | "."{DIGITO}+)
+CONST_HEX = 0h([0-9A-Fa-f]+)
 COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 
@@ -31,9 +31,10 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 <YYINITIAL> {
 
-":"     { System.out.println("Token DECVAR encontrado, Lexema "+ yytext()); }
 
 "="			{System.out.println("Token ASIGN encontrado, Lexema "+ yytext());}
+
+":="			{System.out.println("Token CONST encontrado, Lexema "+ yytext());}
 
 "+"			{System.out.println("Token SUMA encontrado, Lexema "+ yytext());}
 
@@ -65,6 +66,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 "float"     { System.out.println("Token PR_FLOAT encontrado, Lexema "+yytext()); }
 
+"show"      { System.out.println("Token SHOW encontrado, Lexema "+yytext()); }
 
 "["				{System.out.println("Token CLASP_A encontrado, Lexema "+ yytext());}
 
@@ -112,9 +114,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 }
 
-[^]		{ throw new Error("Caracter no permitido: <" + yytext() + "> en la linea " + yyline); }
-
-
+[^]		{}
 
 
 
