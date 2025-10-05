@@ -1,9 +1,8 @@
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
+import java.io.*;
+
 
 public class GuiAnalizador {
     private JButton ingresarButton;
@@ -13,6 +12,7 @@ public class GuiAnalizador {
     private JScrollPane scrollInput;
     private JTextArea output;
     private JScrollPane scrollOutput;
+    private JButton abrirArchivoButton;
     Lexico lexer;
 
     public GuiAnalizador(){
@@ -23,6 +23,35 @@ public class GuiAnalizador {
                 ingresarTexto();
             }
         });
+        abrirArchivoButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String ubicacion = JOptionPane.showInputDialog(null, "Ingrese la ubicacion del archivo:");
+                ingresarArchivo(ubicacion);
+            }
+        });
+    }
+
+    private void ingresarArchivo(String ubicacionArchivo) {
+        try {
+            FileReader fr = new FileReader(ubicacionArchivo);
+            BufferedReader br = new BufferedReader(fr);
+
+            StringBuilder contenido = new StringBuilder();
+            String linea;
+
+            while ((linea = br.readLine()) != null) {
+                contenido.append(linea).append("\n");
+            }
+
+            br.close();
+
+            input.setText(contenido.toString());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Archivo no encontrado");
+            throw new RuntimeException(e);
+        }
     }
 
     private void ingresarTexto(){
