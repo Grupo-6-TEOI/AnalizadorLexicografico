@@ -1,5 +1,39 @@
+
 numero = 2
 cont = 0
 FOR al IS RANGE [numero*2+8] {STEP 2}
     cont = cont + 1
+
 NEXT al
+$*DECLARACIONES*$
+DECVAR
+numero : INT
+cont : INT
+ENDDECVAR
+
+PROGRAM.SECTION
+numero = 2
+cont = 0
+
+$*REPEAT*$
+
+FOR al IS RANGE [numero * 2 + 8] {STEP 2}
+    cont = cont + 1
+NEXT al
+
+$*DECISIONES*$
+IF (numero > 5)
+    texto = "El número es mayor a 5"
+ELSE
+    texto = "El número es menor o igual a 5"
+ENDIF
+
+$*ASIGNACIONES*$
+Asignaciones simples a := b 
+$*TIPO DE DATOS*$ 
+VARIABLES 
+ENDPROGRAM.SECTION
+
+
+ 
+COMENTARIOS 
