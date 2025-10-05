@@ -21,7 +21,7 @@ ESPACIO = [ \t\f\n\r\n]+
 ID = {LETRA} ({LETRA}|{DIGITO}|_)*
 CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
 CONST_INT = {DIGITO}+
-CONST_REAL = {DIGITO}*"."{DIGITO}+|{DIGITO}+"."{DIGITO}
+CONST_REAL = ({DIGITO}+\.{DIGITO}*|{DIGITO}*\.{DIGITO}+)
 CONST_HEX = 0h ({DIGITO}|[A-F])
 COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
@@ -112,6 +112,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 }
 
 [^]		{ throw new Error("Caracter no permitido: <" + yytext() + "> en la linea " + yyline); }
+
 
 
 
