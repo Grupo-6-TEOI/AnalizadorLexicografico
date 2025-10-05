@@ -31,6 +31,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 <YYINITIAL> {
 
+":"     { System.out.println("Token DECVAR encontrado, Lexema "+ yytext()); }
 
 "="			{System.out.println("Token ASIGN encontrado, Lexema "+ yytext());}
 
@@ -112,6 +113,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 }
 
 [^]		{ throw new Error("Caracter no permitido: <" + yytext() + "> en la linea " + yyline); }
+
 
 
 
