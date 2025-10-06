@@ -1,0 +1,26 @@
+$*Caso Especial*$
+
+numero = 2
+cont = 0
+FOR al IS RANGE [numero*2+8] {STEP 2}
+    cont = cont + 1
+NEXT al
+
+$*Decisiones*$
+
+IF [numero == 2] THEN
+	numero = 3
+ELSE
+	numero = 2
+
+$* TIPO DE DATOS *$
+
+numeroEntero = 5
+numeroReal1 = 5.555
+numeroReal2 = 0.444
+
+$* CONSTANTES STRING *$
+
+show “@sdADaSjfla%dfg”
+var := "HOLA MUNDO"
+

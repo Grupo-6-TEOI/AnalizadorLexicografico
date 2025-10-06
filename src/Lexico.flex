@@ -114,7 +114,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 }
 
-[^]		{}
+[^]		{ throw new Error("Caracter no permitido: <" + yytext() + "> en la linea " + yyline); }
 
 
 
