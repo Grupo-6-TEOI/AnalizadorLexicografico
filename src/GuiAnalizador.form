@@ -35,7 +35,9 @@
             <children>
               <component id="17e32" class="javax.swing.JTextArea" binding="input">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <margin top="0" left="6" bottom="0" right="0"/>
+                </properties>
               </component>
             </children>
           </scrollpane>
@@ -48,7 +50,9 @@
             <children>
               <component id="e104" class="javax.swing.JTextArea" binding="output">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <margin top="0" left="0" bottom="0" right="6"/>
+                </properties>
               </component>
             </children>
           </scrollpane>

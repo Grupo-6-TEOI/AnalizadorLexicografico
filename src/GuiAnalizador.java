@@ -27,7 +27,7 @@ public class GuiAnalizador {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                String ubicacion = JOptionPane.showInputDialog(null, "Ingrese la ubicacion del archivo:");
+                String ubicacion = JOptionPane.showInputDialog(null, "Ingrese la ubicacion del archivo:","src/prueba.txt");
                 ingresarArchivo(ubicacion);
             }
         });
@@ -40,6 +40,7 @@ public class GuiAnalizador {
 
             StringBuilder contenido = new StringBuilder();
             String linea;
+
 
             while ((linea = br.readLine()) != null) {
                 contenido.append(linea).append("\n");

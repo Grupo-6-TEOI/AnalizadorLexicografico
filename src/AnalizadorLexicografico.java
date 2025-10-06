@@ -15,5 +15,7 @@ public class AnalizadorLexicografico {
         frame.pack();
         frame.setVisible(true);
 
+
+
     }
 }
