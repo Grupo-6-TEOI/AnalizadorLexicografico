@@ -21,7 +21,7 @@ ESPACIO = [ \t\f\n\r\n]+
 ID = {LETRA} ({LETRA}|{DIGITO}|_)*
 CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
 CONST_INT = {DIGITO}+
-CONST_REAL = ({DIGITO}+"."{DIGITO}* | "."{DIGITO}+)
+CONST_FLOAT = ({DIGITO}+"."{DIGITO}* | "."{DIGITO}+)
 CONST_HEX = 0h([0-9A-Fa-f]+)
 COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
@@ -31,6 +31,8 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 <YYINITIAL> {
 
+
+":"         {System.out.println("Token DATA_TYPE_ASSIGN encontrado, Lexema "+ yytext());}
 
 "="			{System.out.println("Token ASIGN encontrado, Lexema "+ yytext());}
 
@@ -46,6 +48,10 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 "^"			{System.out.println("Token POT encontrado, Lexema "+ yytext());}
 
+"DECVAR"    {System.out.println("Token DEC_VAR encontrado, Lexema "+ yytext());}
+
+"ENDDECVAR"    {System.out.println("Token END_DEC_VAR encontrado, Lexema "+ yytext());}
+
 "FOR"       { System.out.println("Token PR_FOR encontrado, Lexema "+yytext()); }
 
 "IS"        { System.out.println("Token PR_IS encontrado, Lexema "+yytext()); }
@@ -60,7 +66,17 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 "if"        { System.out.println("Token PR_IF encontrado, Lexema "+yytext()); }
 
+"IF"        { System.out.println("Token PR_IF encontrado, Lexema "+yytext()); }
+
 "else"      { System.out.println("Token PR_ELSE encontrado, Lexema "+yytext()); }
+
+"ELSE"      { System.out.println("Token PR_ELSE encontrado, Lexema "+yytext()); }
+
+"ENDIF"     { System.out.println("Token PR_ENDIF encontrado, Lexema "+yytext()); }
+
+"REPEAT"    { System.out.println("Token PR_REPEAT encontrado, Lexema "+yytext()); }
+
+"UNTIL"    { System.out.println("Token PR_UNTIL encontrado, Lexema "+yytext()); }
 
 "int"       { System.out.println("Token PR_INT encontrado, Lexema "+yytext()); }
 
@@ -100,9 +116,11 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 "+="			{System.out.println("Token MASIGUAL encontrado, Lexema "+ yytext());}
 
-{ID}			{System.out.println("Token ID encontrado, Lexema "+ yytext()); /* recordar colocarlo luego de las palabras reservadas porque si se coloca antes va a reconocer la palabra como ID */ }
+{ID}			{System.out.println("Token ID encontrado, Lexema "+ yytext());}
 
-{CONST_INT}		{System.out.println("Token CONST_INT, encontrado Lexema "+ yytext()); /* recordar que no debe exceder los 16 bits 0 < entero < 32768 */}
+{CONST_FLOAT}   {System.out.println("Token CONST_FLOAT, encontrado Lexema "+ yytext());}
+
+{CONST_INT}		{System.out.println("Token CONST_INT, encontrado Lexema "+ yytext());}
 
 {CONST_STR}		{System.out.println("Token CONST_STR, encontrado Lexema "+ yytext());}
 
@@ -114,7 +132,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 }
 
-[^]		{ throw new Error("Caracter no permitido: <" + yytext() + "> en la linea " + yyline); }
+[^]		{}
 
 
 

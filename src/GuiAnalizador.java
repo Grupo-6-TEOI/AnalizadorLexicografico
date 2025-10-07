@@ -13,6 +13,7 @@ public class GuiAnalizador {
     private JTextArea output;
     private JScrollPane scrollOutput;
     private JButton abrirArchivoButton;
+    private JLabel inputLabel;
     Lexico lexer;
 
     public GuiAnalizador(){

@@ -20,8 +20,6 @@ public class Lexico implements java_cup.runtime.Scanner {
   // Lexical states.
   public static final int YYINITIAL = 0;
 
-  public GuiAnalizador guiAnalizador;
-
   /**
    * ZZ_LEXSTATE[l] is the state in the DFA for the lexical state l
    * ZZ_LEXSTATE[l+1] is the state in the DFA for the lexical state l
@@ -39,6 +37,7 @@ public class Lexico implements java_cup.runtime.Scanner {
 
   private static final String ZZ_CMAP_TOP_PACKED_0 =
     "\1\0\u10ff\u0100";
+  private GuiAnalizador guiAnalizador;
 
   private static int [] zzUnpackcmap_top() {
     int [] result = new int[4352];
@@ -69,13 +68,13 @@ public class Lexico implements java_cup.runtime.Scanner {
     "\11\0\2\1\1\0\2\1\22\0\1\1\1\2\1\3"+
     "\1\0\1\4\1\5\2\0\1\6\1\7\1\10\1\11"+
     "\1\12\1\0\1\13\1\14\1\15\11\16\1\17\1\0"+
-    "\1\20\1\21\1\22\2\0\1\23\3\24\1\25\1\26"+
-    "\1\27\1\30\1\31\4\30\1\32\1\33\1\34\1\30"+
-    "\1\35\1\36\1\37\3\30\1\40\2\30\1\41\1\0"+
-    "\1\42\1\43\1\44\1\0\1\45\3\24\1\46\1\47"+
-    "\1\30\1\50\1\51\2\30\1\52\1\30\1\53\1\54"+
-    "\3\30\1\55\1\56\2\30\1\57\3\30\1\60\1\0"+
-    "\1\61\u0182\0";
+    "\1\20\1\21\1\22\2\0\1\23\1\24\1\25\1\26"+
+    "\1\27\1\30\1\31\1\32\1\33\2\32\1\34\1\32"+
+    "\1\35\1\36\1\37\1\32\1\40\1\41\1\42\1\43"+
+    "\1\44\1\32\1\45\2\32\1\46\1\0\1\47\1\50"+
+    "\1\51\1\0\1\52\3\24\1\53\1\54\1\32\1\55"+
+    "\1\56\2\32\1\57\1\32\1\60\1\61\3\32\1\62"+
+    "\1\63\2\32\1\64\3\32\1\65\1\0\1\66\u0182\0";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[512];
@@ -103,16 +102,17 @@ public class Lexico implements java_cup.runtime.Scanner {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\3\2\1\1\4\1\5\1\6"+
-    "\1\7\1\10\1\11\1\12\1\13\2\14\1\1\1\15"+
-    "\1\16\1\17\6\20\1\21\1\22\1\23\5\20\1\24"+
-    "\1\25\1\26\1\0\1\27\1\0\1\30\1\0\1\31"+
-    "\1\32\1\33\1\34\1\20\1\35\5\20\1\36\3\20"+
-    "\1\0\1\27\1\37\5\20\1\40\2\20\1\41\1\42"+
-    "\1\20\1\43\1\44\1\20\1\45\1\20\1\46\1\47"+
-    "\1\50";
+    "\1\7\1\10\1\11\1\12\1\13\2\14\1\15\1\16"+
+    "\1\17\1\20\11\21\1\22\1\23\1\24\5\21\1\25"+
+    "\1\26\1\27\1\0\1\30\1\0\1\31\1\32\1\0"+
+    "\1\33\1\34\1\35\1\36\4\21\1\37\1\40\12\21"+
+    "\1\0\1\30\3\21\1\41\7\21\1\42\2\21\1\43"+
+    "\1\21\1\44\2\21\1\45\2\21\1\46\2\21\1\47"+
+    "\3\21\1\50\1\51\1\21\1\52\1\53\1\54\1\55"+
+    "\1\21\1\56\2\21\1\57";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[79];
+    int [] result = new int[109];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -137,19 +137,23 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\62\0\144\0\226\0\310\0\372\0\62\0\62"+
-    "\0\62\0\62\0\u012c\0\62\0\62\0\62\0\u015e\0\u0190"+
-    "\0\u01c2\0\u01f4\0\u0226\0\u0258\0\u028a\0\u02bc\0\u02ee\0\u0320"+
-    "\0\u0352\0\u0384\0\62\0\62\0\62\0\u03b6\0\u03e8\0\u041a"+
-    "\0\u044c\0\u047e\0\62\0\62\0\62\0\310\0\62\0\u04b0"+
-    "\0\62\0\u04e2\0\62\0\62\0\62\0\62\0\u0514\0\u028a"+
-    "\0\u0546\0\u0578\0\u05aa\0\u05dc\0\u060e\0\u028a\0\u0640\0\u0672"+
-    "\0\u06a4\0\u06d6\0\u04e2\0\u028a\0\u0708\0\u073a\0\u076c\0\u079e"+
-    "\0\u07d0\0\u028a\0\u0802\0\u0834\0\62\0\u028a\0\u0866\0\u028a"+
-    "\0\u028a\0\u0898\0\u028a\0\u08ca\0\u028a\0\u028a\0\u028a";
+    "\0\0\0\67\0\156\0\245\0\334\0\u0113\0\67\0\67"+
+    "\0\67\0\67\0\u014a\0\67\0\u0181\0\67\0\u01b8\0\u01ef"+
+    "\0\u0226\0\u025d\0\u0294\0\u02cb\0\u0302\0\u0339\0\u0370\0\u03a7"+
+    "\0\u03de\0\u0415\0\u044c\0\u0483\0\u04ba\0\67\0\67\0\67"+
+    "\0\u04f1\0\u0528\0\u055f\0\u0596\0\u05cd\0\67\0\67\0\67"+
+    "\0\334\0\67\0\u0604\0\67\0\u0181\0\u063b\0\67\0\67"+
+    "\0\67\0\67\0\u0672\0\u06a9\0\u06e0\0\u0717\0\u0302\0\u0302"+
+    "\0\u074e\0\u0785\0\u07bc\0\u07f3\0\u082a\0\u0861\0\u0898\0\u08cf"+
+    "\0\u0906\0\u093d\0\u0974\0\u063b\0\u09ab\0\u09e2\0\u0a19\0\u0302"+
+    "\0\u0a50\0\u0a87\0\u0abe\0\u0af5\0\u0b2c\0\u0b63\0\u0b9a\0\u0302"+
+    "\0\u0bd1\0\u0c08\0\67\0\u0c3f\0\u0302\0\u0c76\0\u0cad\0\u0302"+
+    "\0\u0ce4\0\u0d1b\0\u0302\0\u0d52\0\u0d89\0\u0302\0\u0dc0\0\u0df7"+
+    "\0\u0e2e\0\u0302\0\u0302\0\u0e65\0\u0302\0\u0302\0\u0302\0\u0302"+
+    "\0\u0e9c\0\u0302\0\u0ed3\0\u0f0a\0\u0302";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[79];
+    int [] result = new int[109];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -174,49 +178,75 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
     "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-    "\1\22\1\23\1\24\3\25\1\26\2\25\1\27\1\30"+
-    "\2\25\1\31\1\32\2\25\1\33\1\34\1\35\1\2"+
-    "\1\25\1\36\1\37\1\25\1\40\3\25\1\41\1\25"+
-    "\1\42\1\43\1\44\63\0\1\3\101\0\1\45\41\0"+
-    "\1\46\1\0\1\47\11\0\2\46\4\0\16\46\4\0"+
-    "\13\46\12\0\1\50\72\0\1\51\55\0\2\20\31\0"+
-    "\1\52\26\0\2\20\64\0\1\53\61\0\1\54\61\0"+
-    "\1\55\61\0\1\56\55\0\2\25\4\0\16\25\3\0"+
-    "\14\25\17\0\2\25\4\0\10\25\1\57\5\25\3\0"+
-    "\14\25\17\0\2\25\4\0\13\25\1\60\2\25\3\0"+
-    "\14\25\17\0\2\25\4\0\2\25\1\61\13\25\3\0"+
-    "\14\25\17\0\2\25\4\0\1\62\15\25\3\0\14\25"+
-    "\17\0\2\25\4\0\14\25\1\63\1\25\3\0\14\25"+
-    "\17\0\2\25\4\0\16\25\3\0\6\25\1\64\5\25"+
-    "\17\0\2\25\4\0\16\25\3\0\6\25\1\65\5\25"+
-    "\17\0\2\25\4\0\16\25\3\0\3\25\1\66\3\25"+
-    "\1\67\4\25\17\0\2\25\4\0\16\25\3\0\4\25"+
-    "\1\70\7\25\17\0\2\25\4\0\16\25\3\0\4\25"+
-    "\1\71\7\25\3\0\1\50\6\0\1\72\4\0\2\50"+
-    "\4\0\16\50\4\0\13\50\17\0\2\73\4\0\4\73"+
-    "\16\0\3\73\27\0\2\25\4\0\12\25\1\74\3\25"+
-    "\3\0\14\25\17\0\2\25\4\0\15\25\1\75\3\0"+
-    "\14\25\17\0\2\25\4\0\7\25\1\76\6\25\3\0"+
-    "\14\25\17\0\2\25\4\0\2\25\1\77\13\25\3\0"+
-    "\14\25\17\0\2\25\4\0\16\25\3\0\11\25\1\100"+
-    "\2\25\17\0\2\25\4\0\16\25\3\0\10\25\1\101"+
-    "\3\25\17\0\2\25\4\0\16\25\3\0\12\25\1\102"+
-    "\1\25\17\0\2\25\4\0\16\25\3\0\10\25\1\103"+
-    "\3\25\17\0\2\25\4\0\16\25\3\0\5\25\1\104"+
-    "\6\25\6\0\1\105\72\0\2\25\4\0\14\25\1\106"+
-    "\1\25\3\0\14\25\17\0\2\25\4\0\4\25\1\107"+
-    "\11\25\3\0\14\25\17\0\2\25\4\0\11\25\1\110"+
-    "\4\25\3\0\14\25\17\0\2\25\4\0\16\25\3\0"+
-    "\2\25\1\111\11\25\17\0\2\25\4\0\16\25\3\0"+
-    "\1\25\1\112\12\25\17\0\2\25\4\0\16\25\3\0"+
-    "\13\25\1\113\17\0\2\25\4\0\16\25\3\0\6\25"+
-    "\1\114\5\25\17\0\2\25\4\0\2\25\1\115\13\25"+
-    "\3\0\14\25\17\0\2\25\4\0\16\25\3\0\12\25"+
-    "\1\116\1\25\17\0\2\25\4\0\16\25\3\0\2\25"+
-    "\1\117\11\25\2\0";
+    "\1\22\1\23\1\24\3\25\1\26\1\27\1\30\2\25"+
+    "\1\31\1\25\1\32\2\25\1\33\1\34\1\25\1\35"+
+    "\2\25\1\36\1\37\1\40\1\2\1\25\1\41\1\42"+
+    "\1\25\1\43\3\25\1\44\1\25\1\45\1\46\1\47"+
+    "\70\0\1\3\106\0\1\50\46\0\1\51\1\0\1\52"+
+    "\11\0\2\51\4\0\23\51\4\0\13\51\12\0\1\53"+
+    "\77\0\1\54\62\0\2\55\63\0\1\55\1\0\2\20"+
+    "\36\0\1\56\24\0\1\55\1\0\2\20\71\0\1\57"+
+    "\66\0\1\60\66\0\1\61\66\0\1\62\62\0\2\25"+
+    "\4\0\23\25\3\0\14\25\17\0\2\25\4\0\4\25"+
+    "\1\63\16\25\3\0\14\25\17\0\2\25\4\0\11\25"+
+    "\1\64\1\65\10\25\3\0\14\25\17\0\2\25\4\0"+
+    "\13\25\1\66\7\25\3\0\14\25\17\0\2\25\4\0"+
+    "\5\25\1\67\10\25\1\70\4\25\3\0\14\25\17\0"+
+    "\2\25\4\0\4\25\1\71\16\25\3\0\14\25\17\0"+
+    "\2\25\4\0\1\72\3\25\1\73\16\25\3\0\14\25"+
+    "\17\0\2\25\4\0\17\25\1\74\3\25\3\0\14\25"+
+    "\17\0\2\25\4\0\12\25\1\75\10\25\3\0\14\25"+
+    "\17\0\2\25\4\0\23\25\3\0\6\25\1\76\5\25"+
+    "\17\0\2\25\4\0\23\25\3\0\6\25\1\77\5\25"+
+    "\17\0\2\25\4\0\23\25\3\0\3\25\1\67\3\25"+
+    "\1\100\4\25\17\0\2\25\4\0\23\25\3\0\4\25"+
+    "\1\101\7\25\17\0\2\25\4\0\23\25\3\0\4\25"+
+    "\1\102\7\25\3\0\1\53\6\0\1\103\4\0\2\53"+
+    "\4\0\23\53\4\0\13\53\17\0\2\104\4\0\6\104"+
+    "\21\0\3\104\27\0\2\25\4\0\2\25\1\105\20\25"+
+    "\3\0\14\25\17\0\2\25\4\0\16\25\1\106\4\25"+
+    "\3\0\14\25\17\0\2\25\4\0\3\25\1\107\17\25"+
+    "\3\0\14\25\17\0\2\25\4\0\15\25\1\110\5\25"+
+    "\3\0\14\25\17\0\2\25\4\0\22\25\1\111\3\0"+
+    "\14\25\17\0\2\25\4\0\12\25\1\112\10\25\3\0"+
+    "\14\25\17\0\2\25\4\0\14\25\1\113\6\25\3\0"+
+    "\14\25\17\0\2\25\4\0\4\25\1\114\16\25\3\0"+
+    "\14\25\17\0\2\25\4\0\17\25\1\115\3\25\3\0"+
+    "\14\25\17\0\2\25\4\0\23\25\3\0\11\25\1\116"+
+    "\2\25\17\0\2\25\4\0\23\25\3\0\10\25\1\117"+
+    "\3\25\17\0\2\25\4\0\23\25\3\0\12\25\1\120"+
+    "\1\25\17\0\2\25\4\0\23\25\3\0\10\25\1\121"+
+    "\3\25\17\0\2\25\4\0\23\25\3\0\5\25\1\122"+
+    "\6\25\6\0\1\123\77\0\2\25\4\0\21\25\1\124"+
+    "\1\25\3\0\14\25\17\0\2\25\4\0\4\25\1\125"+
+    "\16\25\3\0\14\25\17\0\2\25\4\0\3\25\1\126"+
+    "\4\25\1\127\12\25\3\0\14\25\17\0\2\25\4\0"+
+    "\17\25\1\130\3\25\3\0\14\25\17\0\2\25\4\0"+
+    "\6\25\1\131\14\25\3\0\14\25\17\0\2\25\4\0"+
+    "\4\25\1\132\16\25\3\0\14\25\17\0\2\25\4\0"+
+    "\14\25\1\133\6\25\3\0\14\25\17\0\2\25\4\0"+
+    "\10\25\1\134\12\25\3\0\14\25\17\0\2\25\4\0"+
+    "\23\25\3\0\2\25\1\125\11\25\17\0\2\25\4\0"+
+    "\23\25\3\0\1\25\1\135\12\25\17\0\2\25\4\0"+
+    "\23\25\3\0\13\25\1\136\17\0\2\25\4\0\23\25"+
+    "\3\0\6\25\1\137\5\25\17\0\2\25\4\0\1\140"+
+    "\22\25\3\0\14\25\17\0\2\25\4\0\4\25\1\141"+
+    "\16\25\3\0\14\25\17\0\2\25\4\0\5\25\1\142"+
+    "\15\25\3\0\14\25\17\0\2\25\4\0\4\25\1\143"+
+    "\16\25\3\0\14\25\17\0\2\25\4\0\1\144\22\25"+
+    "\3\0\14\25\17\0\2\25\4\0\11\25\1\145\11\25"+
+    "\3\0\14\25\17\0\2\25\4\0\23\25\3\0\12\25"+
+    "\1\146\1\25\17\0\2\25\4\0\23\25\3\0\2\25"+
+    "\1\147\11\25\17\0\2\25\4\0\15\25\1\150\5\25"+
+    "\3\0\14\25\17\0\2\25\4\0\2\25\1\151\20\25"+
+    "\3\0\14\25\17\0\2\25\4\0\17\25\1\152\3\25"+
+    "\3\0\14\25\17\0\2\25\4\0\21\25\1\153\1\25"+
+    "\3\0\14\25\17\0\2\25\4\0\1\154\22\25\3\0"+
+    "\14\25\17\0\2\25\4\0\15\25\1\155\5\25\3\0"+
+    "\14\25\2\0";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[2300];
+    int [] result = new int[3905];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -259,12 +289,12 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\4\1\4\11\1\1\3\11\14\1\3\11"+
-    "\5\1\3\11\1\0\1\11\1\0\1\11\1\0\4\11"+
-    "\13\1\1\0\12\1\1\11\12\1";
+    "\1\0\1\11\4\1\4\11\1\1\1\11\1\1\1\11"+
+    "\17\1\3\11\5\1\3\11\1\0\1\11\1\0\1\11"+
+    "\1\1\1\0\4\11\20\1\1\0\17\1\1\11\32\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[79];
+    int [] result = new int[109];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -350,7 +380,6 @@ public class Lexico implements java_cup.runtime.Scanner {
     this.guiAnalizador = guiAnalizador;
 
   }
-
 
 
   /** Returns the maximum size of the scanner buffer, which limits the size of tokens. */
@@ -772,202 +801,237 @@ public class Lexico implements java_cup.runtime.Scanner {
             { 
             }
           // fall through
-          case 41: break;
+          case 48: break;
           case 2:
             { /* no se realiza accion por lo tanto se ignoran*/
             }
           // fall through
-          case 42: break;
+          case 49: break;
           case 3:
-            {  guiAnalizador.mostrarTexto("Token NOT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("Token NOT encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 43: break;
+          case 50: break;
           case 4:
             { guiAnalizador.mostrarTexto("Token MOD encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 44: break;
+          case 51: break;
           case 5:
             { guiAnalizador.mostrarTexto("Token PAREN_A encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 45: break;
+          case 52: break;
           case 6:
             { guiAnalizador.mostrarTexto("Token PAREN_C encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 46: break;
+          case 53: break;
           case 7:
-            { guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
+            {guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 47: break;
+          case 54: break;
           case 8:
             { guiAnalizador.mostrarTexto("Token SUMA encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 48: break;
+          case 55: break;
           case 9:
             { guiAnalizador.mostrarTexto("Token COMA encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 49: break;
+          case 56: break;
           case 10:
             { guiAnalizador.mostrarTexto("Token PUNTO encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 50: break;
+          case 57: break;
           case 11:
             { guiAnalizador.mostrarTexto("Token DIV encontrado, Lexema "+ yytext());
             }
           // fall through
-          case 51: break;
-          case 12:
-            { guiAnalizador.mostrarTexto("Token CONST_INT, encontrado Lexema "+ yytext()); /* recordar que no debe exceder los 16 bits 0 < entero < 32768 */
-            }
-          // fall through
-          case 52: break;
-          case 13:
-            { guiAnalizador.mostrarTexto("Token MENOR encontrado, Lexema "+ yytext());
-            }
-          // fall through
-          case 53: break;
-          case 14:
-            { guiAnalizador.mostrarTexto("Token ASIGN encontrado, Lexema "+ yytext());
-            }
-          // fall through
-          case 54: break;
-          case 15:
-            { guiAnalizador.mostrarTexto("Token MAYOR encontrado, Lexema "+ yytext());
-            }
-          // fall through
-          case 55: break;
-          case 16:
-            { guiAnalizador.mostrarTexto("Token ID encontrado, Lexema "+ yytext()); /* recordar colocarlo luego de las palabras reservadas porque si se coloca antes va a reconocer la palabra como ID */
-            }
-          // fall through
-          case 56: break;
-          case 17:
-            { guiAnalizador.mostrarTexto("Token CLASP_A encontrado, Lexema "+ yytext());
-            }
-          // fall through
-          case 57: break;
-          case 18:
-            { guiAnalizador.mostrarTexto("Token CLASP_C encontrado, Lexema "+ yytext());
-            }
-          // fall through
           case 58: break;
-          case 19:
-            { guiAnalizador.mostrarTexto("Token POT encontrado, Lexema "+ yytext());
+          case 12:
+            { guiAnalizador.mostrarTexto("Token CONST_INT, encontrado Lexema "+ yytext());
             }
           // fall through
           case 59: break;
-          case 20:
-            { guiAnalizador.mostrarTexto("Token KEY_A encontrado, Lexema "+ yytext());
+          case 13:
+            { guiAnalizador.mostrarTexto("Token DATA_TYPE_ASSIGN encontrado, Lexema "+ yytext());
             }
           // fall through
           case 60: break;
-          case 21:
-            { guiAnalizador.mostrarTexto("Token KEY_C encontrado, Lexema "+ yytext());
+          case 14:
+            { guiAnalizador.mostrarTexto("Token MENOR encontrado, Lexema "+ yytext());
             }
           // fall through
           case 61: break;
-          case 22:
-            { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
+          case 15:
+            { guiAnalizador.mostrarTexto("Token ASIGN encontrado, Lexema "+ yytext());
             }
           // fall through
           case 62: break;
-          case 23:
-            { guiAnalizador.mostrarTexto("Token CONST_STR, encontrado Lexema "+ yytext());
+          case 16:
+            {guiAnalizador.mostrarTexto("Token MAYOR encontrado, Lexema "+ yytext());
             }
           // fall through
           case 63: break;
-          case 24:
-            { guiAnalizador.mostrarTexto("Token MASIGUAL encontrado, Lexema "+ yytext());
+          case 17:
+            {guiAnalizador.mostrarTexto("Token ID encontrado, Lexema "+ yytext());
             }
           // fall through
           case 64: break;
-          case 25:
-            { guiAnalizador.mostrarTexto("Token CONST encontrado, Lexema "+ yytext());
+          case 18:
+            { guiAnalizador.mostrarTexto("Token CLASP_A encontrado, Lexema "+ yytext());
             }
           // fall through
           case 65: break;
-          case 26:
-            { guiAnalizador.mostrarTexto("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
+          case 19:
+            { guiAnalizador.mostrarTexto("Token CLASP_C encontrado, Lexema "+ yytext());
             }
           // fall through
           case 66: break;
-          case 27:
-            { guiAnalizador.mostrarTexto("Token IGUAL encontrado, Lexema "+ yytext());
+          case 20:
+            { guiAnalizador.mostrarTexto("Token POT encontrado, Lexema "+ yytext());
             }
           // fall through
           case 67: break;
-          case 28:
-            { guiAnalizador.mostrarTexto("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
+          case 21:
+            { guiAnalizador.mostrarTexto("Token KEY_A encontrado, Lexema "+ yytext());
             }
           // fall through
           case 68: break;
-          case 29:
-            { guiAnalizador.mostrarTexto("Token PR_IS encontrado, Lexema "+yytext());
+          case 22:
+            { guiAnalizador.mostrarTexto("Token KEY_C encontrado, Lexema "+ yytext());
             }
           // fall through
           case 69: break;
-          case 30:
-            { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+yytext());
+          case 23:
+            { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
             }
           // fall through
           case 70: break;
-          case 31:
-            { guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+yytext());
+          case 24:
+            { guiAnalizador.mostrarTexto("Token CONST_STR, encontrado Lexema "+ yytext());
             }
           // fall through
           case 71: break;
-          case 32:
-            { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+yytext());
+          case 25:
+            { guiAnalizador.mostrarTexto("Token MASIGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 72: break;
-          case 33:
-            { /* No se realiza accion por lo tanto se ignoran*/
+          case 26:
+            { guiAnalizador.mostrarTexto("Token CONST_FLOAT, encontrado Lexema "+ yytext());
             }
           // fall through
           case 73: break;
-          case 34:
-            { guiAnalizador.mostrarTexto("Token PR_NEXT encontrado, Lexema "+yytext());
+          case 27:
+            { guiAnalizador.mostrarTexto("Token CONST encontrado, Lexema "+ yytext());
             }
           // fall through
           case 74: break;
-          case 35:
-            {guiAnalizador.mostrarTexto("Token PR_STEP encontrado, Lexema "+yytext());
+          case 28:
+            {guiAnalizador.mostrarTexto("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 75: break;
-          case 36:
-            { guiAnalizador.mostrarTexto("Token PR_ELSE encontrado, Lexema "+yytext());
+          case 29:
+            { guiAnalizador.mostrarTexto("Token IGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 76: break;
-          case 37:
-            { guiAnalizador.mostrarTexto("Token SHOW encontrado, Lexema "+yytext());
+          case 30:
+            { guiAnalizador.mostrarTexto("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
             }
           // fall through
           case 77: break;
-          case 38:
-            { guiAnalizador.mostrarTexto("Token PR_RANGE encontrado, Lexema "+yytext());
+          case 31:
+            { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+yytext());
             }
           // fall through
           case 78: break;
-          case 39:
-            { guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+yytext());
+          case 32:
+            { guiAnalizador.mostrarTexto("Token PR_IS encontrado, Lexema "+yytext());
             }
           // fall through
           case 79: break;
-          case 40:
-            { guiAnalizador.mostrarTexto("Token PR_WHILE encontrado, Lexema "+yytext());
+          case 33:
+            {guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+yytext());
             }
           // fall through
           case 80: break;
+          case 34:
+            {guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 81: break;
+          case 35:
+            { /* No se realiza accion por lo tanto se ignoran*/
+            }
+          // fall through
+          case 82: break;
+          case 36:
+            {guiAnalizador.mostrarTexto("Token PR_ELSE encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 83: break;
+          case 37:
+            {guiAnalizador.mostrarTexto("Token PR_NEXT encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 84: break;
+          case 38:
+            {guiAnalizador.mostrarTexto("Token PR_STEP encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 85: break;
+          case 39:
+            { guiAnalizador.mostrarTexto("Token SHOW encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 86: break;
+          case 40:
+            { guiAnalizador.mostrarTexto("Token PR_ENDIF encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 87: break;
+          case 41:
+            { guiAnalizador.mostrarTexto("Token PR_RANGE encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 88: break;
+          case 42:
+            { guiAnalizador.mostrarTexto("Token PR_UNTIL encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 89: break;
+          case 43:
+            {guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 90: break;
+          case 44:
+            {guiAnalizador.mostrarTexto("Token PR_WHILE encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 91: break;
+          case 45:
+            { guiAnalizador.mostrarTexto("Token DEC_VAR encontrado, Lexema "+ yytext());
+            }
+          // fall through
+          case 92: break;
+          case 46:
+            { guiAnalizador.mostrarTexto("Token PR_REPEAT encontrado, Lexema "+yytext());
+            }
+          // fall through
+          case 93: break;
+          case 47:
+            { guiAnalizador.mostrarTexto("Token END_DEC_VAR encontrado, Lexema "+ yytext());
+            }
+          // fall through
+          case 94: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
