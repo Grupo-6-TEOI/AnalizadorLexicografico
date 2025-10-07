@@ -1,4 +1,16 @@
-$*Caso Especial*$
+$* DECLARACIONES *$
+DECVAR
+numero : INT
+cont : INT
+a1 : FLOAT
+b2 : INT
+texto : STRING
+hexVar : INT
+valorReal : FLOAT
+cadenaLarga : STRING
+ENDDECVAR
+
+$*CASO ESPECIAL*$
 
 numero = 2
 cont = 0
@@ -6,12 +18,25 @@ FOR al IS RANGE [numero*2+8] {STEP 2}
     cont = cont + 1
 NEXT al
 
-$*Decisiones*$
-
+$* DECISIONES *$
+IF (numero > 5)
+    texto = "El numero es mayor a 5"
 IF [numero == 2] THEN
 	numero = 3
 ELSE
+    texto = "El numero es menor o igual a 5"
+ENDIF
 	numero = 2
+
+$* ASIGNACIONES SIMPLES *$
+numero = 2
+cont = 0
+a1 = 25.75
+b2 = 100
+texto = "Hola Mundo"
+hexVar = 0hFF
+valorReal = 99999.99
+cadenaLarga = "@sdADaSjfla%dfg"
 
 $* TIPO DE DATOS *$
 
@@ -24,3 +49,21 @@ $* CONSTANTES STRING *$
 show “@sdADaSjfla%dfg”
 var := "HOLA MUNDO"
 
+
+$* SALIDA *$
+show "ewr"
+show 99.999
+show numero
+
+$* CONDICIONES *$
+IF ((b2 >= 50) && (numero < 10))
+    texto = "Condicion compleja verdadera"
+ELSE
+    texto = "Condicion compleja falsa"
+ENDIF
+
+$* REPEAT *$
+REPEAT
+    cont = cont + 1
+    numero = numero - 1
+UNTIL (numero <= 0)
