@@ -10,24 +10,7 @@ valorReal : FLOAT
 cadenaLarga : STRING
 ENDDECVAR
 
-$*CASO ESPECIAL*$
-
-numero = 2
-cont = 0
-FOR al IS RANGE [numero*2+8] {STEP 2}
-    cont = cont + 1
-NEXT al
-
-$* DECISIONES *$
-IF (numero > 5)
-    texto = "El numero es mayor a 5"
-IF [numero == 2] THEN
-	numero = 3
-ELSE
-    texto = "El numero es menor o igual a 5"
-ENDIF
-	numero = 2
-
+PROGRAM.SECTION
 $* ASIGNACIONES SIMPLES *$
 numero = 2
 cont = 0
@@ -38,17 +21,31 @@ hexVar = 0hFF
 valorReal = 99999.99
 cadenaLarga = "@sdADaSjfla%dfg"
 
-$* TIPO DE DATOS *$
+$* REPEAT *$
+FOR al IS RANGE [numero * 2 + 8] {STEP 2}
+    cont = cont + 1
+NEXT al
 
-numeroEntero = 5
-numeroReal1 = 5.555
-numeroReal2 = 0.444
+$* DECISIONES *$
+IF (numero > 5)
+    texto = "El numero es mayor a 5"
+ELSE
+    texto = "El numero es menor o igual a 5"
+ENDIF
+	numero = 2
+$* TIPOS DE DATOS *$
+a1 = 99.
+a1 = .9999
+a1 = 32767
+a1 = 123.456
+texto = "HOLA MUNDO"
+cadenaLarga = "Cadena de 30 caracteres max"
+hexVar = 0hA3F
+hexVar = 0h1B
+hexVar = 0hFF
 
-$* CONSTANTES STRING *$
-
-show “@sdADaSjfla%dfg”
-var := "HOLA MUNDO"
-
+$* COMENTARIOS*$
+$* Este es un comentario $* anidado en un nivel *$ que continua *$
 
 $* SALIDA *$
 show "ewr"
@@ -67,3 +64,11 @@ REPEAT
     cont = cont + 1
     numero = numero - 1
 UNTIL (numero <= 0)
+
+$*CASO ESPECIAL*$
+
+numero = 2
+cont = 0
+FOR al IS RANGE [numero*2+8] {STEP 2}
+    cont = cont + 1
+NEXT al
