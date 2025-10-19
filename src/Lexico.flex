@@ -34,7 +34,7 @@ CONST_HEX = (0h[0-9A-Fa-f]+)
 CONST_INT = {DIGITO}+
 CONST_FLOAT = ({DIGITO}+"."{DIGITO}* | "."{DIGITO}+)
 CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
-COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
+COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPACIO})*"$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 
 %%
@@ -42,139 +42,139 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 <YYINITIAL> {
 
 ":"         { System.out.println("Token DATA_TYPE_ASSIGN encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "DATA_TYPE_ASSIGN", null); }
+              agregarSimbolo(yytext(), "DATA_TYPE_ASSIGN", null); }
 
 "="         { System.out.println("Token ASIGN encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "ASIGN", null); }
+              agregarSimbolo(yytext(), "ASIGN", null); }
 
 ":="        { System.out.println("Token CONST encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "CONST", null); }
+              agregarSimbolo(yytext(), "CONST", null); }
 
 "+"         { System.out.println("Token SUMA encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "SUMA", null); }
+              agregarSimbolo(yytext(), "SUMA", null); }
 
 "*"         { System.out.println("Token MULT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MULT", null); }
+              agregarSimbolo(yytext(), "MULT", null); }
 
 "/"         { System.out.println("Token DIV encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "DIV", null); }
+              agregarSimbolo(yytext(), "DIV", null); }
 
 "%"         { System.out.println("Token MOD encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MOD", null); }
+              agregarSimbolo(yytext(), "MOD", null); }
 
 "^"         { System.out.println("Token POT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "POT", null); }
+              agregarSimbolo(yytext(), "POT", null); }
 
 "DECVAR"    { System.out.println("Token DEC_VAR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "DEC_VAR", null); }
+              agregarSimbolo(yytext(), "DEC_VAR", null); }
 
 "ENDDECVAR" { System.out.println("Token END_DEC_VAR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "END_DEC_VAR", null); }
+              agregarSimbolo(yytext(), "END_DEC_VAR", null); }
 
 "FOR"       { System.out.println("Token PR_FOR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_FOR", null); }
+              agregarSimbolo(yytext(), "PR_FOR", null); }
 
 "IS"        { System.out.println("Token PR_IS encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_IS", null); }
+              agregarSimbolo(yytext(), "PR_IS", null); }
 
 "RANGE"     { System.out.println("Token PR_RANGE encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_RANGE", null); }
+              agregarSimbolo(yytext(), "PR_RANGE", null); }
 
 "STEP"      { System.out.println("Token PR_STEP encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_STEP", null); }
+              agregarSimbolo(yytext(), "PR_STEP", null); }
 
 "NEXT"      { System.out.println("Token PR_NEXT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_NEXT", null); }
+              agregarSimbolo(yytext(), "PR_NEXT", null); }
 
 "while"     { System.out.println("Token PR_WHILE encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_WHILE", null); }
+              agregarSimbolo(yytext(), "PR_WHILE", null); }
 
 "if"|"IF"   { System.out.println("Token PR_IF encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_IF", null); }
+              agregarSimbolo(yytext(), "PR_IF", null); }
 
 "else"|"ELSE" { System.out.println("Token PR_ELSE encontrado, Lexema "+ yytext());
-                agregarSimbolo(yytext().toString(), "PR_ELSE", null); }
+                agregarSimbolo(yytext(), "PR_ELSE", null); }
 
 "ENDIF"     { System.out.println("Token PR_ENDIF encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_ENDIF", null); }
+              agregarSimbolo(yytext(), "PR_ENDIF", null); }
 
 "REPEAT"    { System.out.println("Token PR_REPEAT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_REPEAT", null); }
+              agregarSimbolo(yytext(), "PR_REPEAT", null); }
 
 "UNTIL"     { System.out.println("Token PR_UNTIL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_UNTIL", null); }
+              agregarSimbolo(yytext(), "PR_UNTIL", null); }
 
 "int"       { System.out.println("Token PR_INT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_INT", null); }
+              agregarSimbolo(yytext(), "PR_INT", null); }
 
 "float"     { System.out.println("Token PR_FLOAT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PR_FLOAT", null); }
+              agregarSimbolo(yytext(), "PR_FLOAT", null); }
 
 "show"      { System.out.println("Token SHOW encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "SHOW", null); }
+              agregarSimbolo(yytext(), "SHOW", null); }
 
 "["         { System.out.println("Token CLASP_A encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "CLASP_A", null); }
+              agregarSimbolo(yytext(), "CLASP_A", null); }
 
 "]"         { System.out.println("Token CLASP_C encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "CLASP_C", null); }
+              agregarSimbolo(yytext(), "CLASP_C", null); }
 
 "("         { System.out.println("Token PAREN_A encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PAREN_A", null); }
+              agregarSimbolo(yytext(), "PAREN_A", null); }
 
 ")"         { System.out.println("Token PAREN_C encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PAREN_C", null); }
+              agregarSimbolo(yytext(), "PAREN_C", null); }
 
 "{"         { System.out.println("Token KEY_A encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "KEY_A", null); }
+              agregarSimbolo(yytext(), "KEY_A", null); }
 
 "}"         { System.out.println("Token KEY_C encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "KEY_C", null); }
+              agregarSimbolo(yytext(), "KEY_C", null); }
 
 "."         { System.out.println("Token PUNTO encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "PUNTO", null); }
+              agregarSimbolo(yytext(), "PUNTO", null); }
 
 ","         { System.out.println("Token COMA encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "COMA", null); }
+              agregarSimbolo(yytext(), "COMA", null); }
 
 "=="        { System.out.println("Token IGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "IGUAL", null); }
+              agregarSimbolo(yytext(), "IGUAL", null); }
 
 "<="        { System.out.println("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MENOR_IGUAL", null); }
+              agregarSimbolo(yytext(), "MENOR_IGUAL", null); }
 
 ">="        { System.out.println("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MAYOR_IGUAL", null); }
+              agregarSimbolo(yytext(), "MAYOR_IGUAL", null); }
 
 "<"         { System.out.println("Token MENOR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MENOR", null); }
+              agregarSimbolo(yytext(), "MENOR", null); }
 
 ">"         { System.out.println("Token MAYOR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MAYOR", null); }
+              agregarSimbolo(yytext(), "MAYOR", null); }
 
 "!="        { System.out.println("Token DISTINTO encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "DISTINTO", null); }
+              agregarSimbolo(yytext(), "DISTINTO", null); }
 
 "!"         { System.out.println("Token NOT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "NOT", null); }
+              agregarSimbolo(yytext(), "NOT", null); }
 
 "+="        { System.out.println("Token MASIGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "MASIGUAL", null); }
+              agregarSimbolo(yytext(), "MASIGUAL", null); }
 
 {ID}        { System.out.println("Token ID encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "ID", null); }
+              agregarSimbolo(yytext(), "ID", null); }
 
 {CONST_HEX} { System.out.println("Token CONST_HEX encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "CONST_HEX", yytext()); }
+              agregarSimbolo(yytext(), "CONST_HEX", yytext()); }
 
 {CONST_FLOAT} { System.out.println("Token CONST_FLOAT encontrado, Lexema "+ yytext());
-                agregarSimbolo(yytext().toString(), "CONST_FLOAT", yytext()); }
+                agregarSimbolo(yytext(), "CONST_FLOAT", yytext()); }
 
 {CONST_INT} { System.out.println("Token CONST_INT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "CONST_INT", yytext()); }
+              agregarSimbolo(yytext(), "CONST_INT", yytext()); }
 
 {CONST_STR} { System.out.println("Token CONST_STR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext().toString(), "CONST_STR", yytext()); }
+              agregarSimbolo(yytext(), "CONST_STR", yytext()); }
 
 {ESPACIO}   { /* ignorar espacios */ }
 
