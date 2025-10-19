@@ -60,6 +60,7 @@ public class GuiAnalizador {
         try {
             Reader reader = new StringReader(input.getText());
             lexer = new Lexico(reader);
+            lexer.setGui(this);
             output.setText("");
             while (lexer.next_token() != null) {}
         } catch (IOException e) {

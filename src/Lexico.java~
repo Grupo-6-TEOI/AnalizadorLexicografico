@@ -377,9 +377,9 @@ public class Lexico implements java_cup.runtime.Scanner {
 
     // Instancia única de la tabla de símbolos (Singleton)
     private final TablaDeSimbolo tabla = TablaDeSimbolo.getInstance();
-    private GuiAnalizador guiAnalizador;
+    private final GuiAnalizador guiAnalizador;
 
-    public void setGui(GuiAnalizador a) {
+    private void setGui(GuiAnalizador a) {
             this.guiAnalizador = a;
         }
 

@@ -59,12 +59,6 @@ ENDIF                            PR_ENDIF     -                                5
 "Cadena de 30 caracteres max"    CONST_STR    "Cadena de 30 caracteres max"    29      
 0hA3F                            CONST_HEX    0hA3F                            5       
 0h1B                             CONST_HEX    0h1B                             4       
-Este                             ID           -                                4       
-es                               ID           -                                2       
-un                               ID           -                                2       
-comentario                       ID           -                                10      
-que                              ID           -                                3       
-continua                         ID           -                                8       
 show                             SHOW         -                                4       
 "ewr"                            CONST_STR    "ewr"                            5       
 99.999                           CONST_FLOAT  99.999                           6       
