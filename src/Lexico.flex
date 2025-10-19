@@ -19,10 +19,10 @@ LETRA = [a-zA-Z]
 DIGITO = [0-9]
 ESPACIO = [ \t\f\n\r\n]+
 ID = {LETRA} ({LETRA}|{DIGITO}|_)*
-CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
+CONST_HEX = (0h[0-9A-Fa-f]+)
 CONST_INT = {DIGITO}+
 CONST_FLOAT = ({DIGITO}+"."{DIGITO}* | "."{DIGITO}+)
-CONST_HEX = 0h([0-9A-Fa-f]+)
+CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
 COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 
@@ -118,13 +118,14 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 {ID}			{System.out.println("Token ID encontrado, Lexema "+ yytext());}
 
+
+{CONST_HEX}   {System.out.println("Token CONST_HEX, encontrado Lexema "+ yytext());}
+
 {CONST_FLOAT}   {System.out.println("Token CONST_FLOAT, encontrado Lexema "+ yytext());}
 
 {CONST_INT}		{System.out.println("Token CONST_INT, encontrado Lexema "+ yytext());}
 
 {CONST_STR}		{System.out.println("Token CONST_STR, encontrado Lexema "+ yytext());}
-
-{CONST_HEX}		{System.out.println("Token CONST_STR, encontrado Lexema "+ yytext());}
 
 {ESPACIO}		{/* no se realiza accion por lo tanto se ignoran*/}
 
