@@ -59,16 +59,16 @@ public class GuiAnalizador {
     private void ingresarTexto(){
         try {
             Reader reader = new StringReader(input.getText());
-            lexer = new Lexico(reader, this);
+            lexer = new Lexico(reader);
             output.setText("");
-            lexer.next_token();
+            while (lexer.next_token() != null) {}
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     public void mostrarTexto(String texto){
-        output.setText(output.getText() + texto + "\n");
+        output.append(texto + "\n");
     }
 
     public JPanel getVentana(){
