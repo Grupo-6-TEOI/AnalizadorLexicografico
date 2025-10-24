@@ -6,7 +6,7 @@ parser code {:
     }
 :};
 
-terminal DATA_TYPE_ASSIGN, ASIGN, SUMA, MULT, DIV, MOD, POT;
+terminal DATA_TYPE_ASSIGN, ASIGN, SUMA, MULT, DIV, MOD, POT, RESTA;
 terminal DEC_VAR, END_DEC_VAR;
 terminal PR_FOR, PR_IS, PR_RANGE, PR_STEP, PR_NEXT, PR_WHILE, PR_IF, PR_ELSE, PR_ENDIF, PR_REPEAT, PR_UNTIL, PR_PROGRAM;
 terminal PR_INT, PR_FLOAT, PR_STRING, SHOW;
@@ -68,6 +68,7 @@ Asignacion ::=
 Expresion ::=
       Expresion SUMA Termino
     | Expresion MOD Termino
+    | Expresion RESTA Termino
     | Termino
     ;
 
@@ -125,4 +126,5 @@ OperadorAritmetico ::=
     | DIV
     | MOD
     | POT
+    | RESTA
     ;

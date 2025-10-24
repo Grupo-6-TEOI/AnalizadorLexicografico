@@ -59,6 +59,10 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
               agregarSimbolo(yytext(), "SUMA", null);
               return new Symbol(sym.SUMA, yyline, yycolumn, yytext()); }
 
+"-"         { guiAnalizador.mostrarTexto("Token RESTA encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "RESTA", null);
+              return new Symbol(sym.RESTA, yyline, yycolumn, yytext()); }
+
 "*"         { guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MULT", null);
               return new Symbol(sym.MULT, yyline, yycolumn, yytext()); }

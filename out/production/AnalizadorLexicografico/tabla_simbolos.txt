@@ -49,23 +49,3 @@ IF                               PR_IF        -                                2
 ELSE                             PR_ELSE      -                                4       
 "El numero es menor o igual a 5" CONST_STR    "El numero es menor o igual a 5" 32      
 ENDIF                            PR_ENDIF     -                                5       
-99.                              CONST_FLOAT  99.                              3       
-.9999                            CONST_FLOAT  .9999                            5       
-32767                            CONST_INT    32767                            5       
-123.456                          CONST_FLOAT  123.456                          7       
-"HOLA MUNDO"                     CONST_STR    "HOLA MUNDO"                     12      
-"Cadena de 30 caracteres max"    CONST_STR    "Cadena de 30 caracteres max"    29      
-0hA3F                            CONST_HEX    0hA3F                            5       
-0h1B                             CONST_HEX    0h1B                             4       
-show                             SHOW         -                                4       
-"ewr"                            CONST_STR    "ewr"                            5       
-99.999                           CONST_FLOAT  99.999                           6       
->=                               MAYOR_IGUAL  -                                2       
-50                               CONST_INT    50                               2       
-<                                MENOR        -                                1       
-10                               CONST_INT    10                               2       
-"Condicion compleja verdadera"   CONST_STR    "Condicion compleja verdadera"   30      
-"Condicion compleja falsa"       CONST_STR    "Condicion compleja falsa"       26      
-REPEAT                           PR_REPEAT    -                                6       
-UNTIL                            PR_UNTIL     -                                5       
-<=                               MENOR_IGUAL  -                                2       

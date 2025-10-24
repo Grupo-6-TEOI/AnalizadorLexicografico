@@ -21,4 +21,16 @@ hexVar = 0hFF
 valorReal = 99999.99
 cadenaLarga = "@sdADaSjfla%dfg"
 
+$* FOR *$
+FOR al IS RANGE [numero * 2 + 8] {STEP 2}
+    cont = cont + 1
+NEXT al
+
+$* DECISIONES *$
+IF (numero > 5)
+    texto = "El numero es mayor a 5"
+ELSE
+    texto = "El numero es menor o igual a 5"
+ENDIF
+
 

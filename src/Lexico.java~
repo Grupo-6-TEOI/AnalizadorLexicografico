@@ -839,7 +839,7 @@ public class Lexico implements java_cup.runtime.Scanner {
             zzDoEOF();
               {
                 tabla.writeToFile();
-    return null;
+    return new Symbol(sym.EOF);
               }
       }
       else {

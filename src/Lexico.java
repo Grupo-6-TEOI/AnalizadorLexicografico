@@ -65,14 +65,14 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
     "\11\0\2\1\1\0\2\1\22\0\1\1\1\2\1\3"+
     "\1\0\1\4\1\5\2\0\1\6\1\7\1\10\1\11"+
-    "\1\12\1\0\1\13\1\14\1\15\11\16\1\17\1\0"+
-    "\1\20\1\21\1\22\2\0\1\23\1\24\1\25\1\26"+
-    "\1\27\1\30\1\31\1\32\1\33\2\34\1\35\1\36"+
-    "\1\37\1\40\1\41\1\34\1\42\1\43\1\44\1\45"+
-    "\1\46\1\47\1\50\2\34\1\51\1\0\1\52\1\53"+
-    "\1\54\1\0\1\55\3\24\1\56\1\57\1\60\1\61"+
-    "\1\62\2\34\1\63\1\34\1\64\1\65\2\34\1\66"+
-    "\1\67\1\70\2\34\1\71\3\34\1\72\1\0\1\73"+
+    "\1\12\1\13\1\14\1\15\1\16\11\17\1\20\1\0"+
+    "\1\21\1\22\1\23\2\0\1\24\1\25\1\26\1\27"+
+    "\1\30\1\31\1\32\1\33\1\34\2\35\1\36\1\37"+
+    "\1\40\1\41\1\42\1\35\1\43\1\44\1\45\1\46"+
+    "\1\47\1\50\1\51\2\35\1\52\1\0\1\53\1\54"+
+    "\1\55\1\0\1\56\3\25\1\57\1\60\1\61\1\62"+
+    "\1\63\2\35\1\64\1\35\1\65\1\66\2\35\1\67"+
+    "\1\70\1\71\2\35\1\72\3\35\1\73\1\0\1\74"+
     "\u0182\0";
 
   private static int [] zzUnpackcmap_blocks() {
@@ -101,18 +101,18 @@ public class Lexico implements java_cup.runtime.Scanner {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\3\2\1\1\4\1\5\1\6"+
-    "\1\7\1\10\1\11\1\12\1\13\2\14\1\15\1\16"+
-    "\1\17\1\20\12\21\1\22\1\23\1\24\5\21\1\25"+
-    "\1\26\1\27\1\0\1\30\1\0\1\31\1\0\1\32"+
-    "\1\33\1\34\5\21\1\35\1\21\1\36\15\21\2\0"+
-    "\1\37\4\21\1\40\1\41\15\21\1\0\1\42\1\21"+
-    "\1\43\3\21\1\44\3\21\1\45\1\46\5\21\1\0"+
-    "\2\21\1\47\1\50\1\21\1\51\2\21\1\52\1\21"+
-    "\1\53\1\0\1\54\2\21\1\55\1\56\3\21\1\0"+
-    "\1\57\6\0\1\60";
+    "\1\7\1\10\1\11\1\12\1\13\1\14\2\15\1\16"+
+    "\1\17\1\20\1\21\12\22\1\23\1\24\1\25\5\22"+
+    "\1\26\1\27\1\30\1\0\1\31\1\0\1\32\1\0"+
+    "\1\33\1\34\1\35\5\22\1\36\1\22\1\37\15\22"+
+    "\2\0\1\40\4\22\1\41\1\42\15\22\1\0\1\43"+
+    "\1\22\1\44\3\22\1\45\3\22\1\46\1\47\5\22"+
+    "\1\0\2\22\1\50\1\51\1\22\1\52\2\22\1\53"+
+    "\1\22\1\54\1\0\1\55\2\22\1\56\1\57\3\22"+
+    "\1\0\1\60\6\0\1\61";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[140];
+    int [] result = new int[141];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -137,27 +137,27 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\74\0\170\0\264\0\360\0\u012c\0\74\0\74"+
-    "\0\74\0\74\0\74\0\74\0\u0168\0\74\0\u01a4\0\u01e0"+
-    "\0\74\0\u021c\0\u0258\0\u0294\0\u02d0\0\u030c\0\u0348\0\u0384"+
-    "\0\u03c0\0\u03fc\0\u0438\0\u0474\0\u04b0\0\u04ec\0\74\0\74"+
-    "\0\74\0\u0528\0\u0564\0\u05a0\0\u05dc\0\u0618\0\74\0\74"+
-    "\0\74\0\360\0\74\0\u0654\0\u0168\0\u0690\0\74\0\74"+
-    "\0\74\0\u06cc\0\u0708\0\u0744\0\u0780\0\u07bc\0\u02d0\0\u07f8"+
-    "\0\u02d0\0\u0834\0\u0870\0\u08ac\0\u08e8\0\u0924\0\u0960\0\u099c"+
-    "\0\u09d8\0\u0a14\0\u0a50\0\u0a8c\0\u0ac8\0\u0b04\0\u0b40\0\u0b7c"+
-    "\0\u0690\0\u0bb8\0\u0bf4\0\u0c30\0\u0c6c\0\u02d0\0\u02d0\0\u0ca8"+
-    "\0\u0ce4\0\u0d20\0\u0d5c\0\u0d98\0\u0dd4\0\u0e10\0\u0e4c\0\u0e88"+
-    "\0\u0ec4\0\u0f00\0\u0f3c\0\u0f78\0\u0fb4\0\74\0\u0ff0\0\u02d0"+
-    "\0\u102c\0\u1068\0\u10a4\0\u02d0\0\u10e0\0\u111c\0\u1158\0\u02d0"+
-    "\0\u02d0\0\u1194\0\u11d0\0\u120c\0\u1248\0\u1284\0\u12c0\0\u12fc"+
-    "\0\u1338\0\u02d0\0\u02d0\0\u1374\0\u02d0\0\u13b0\0\u13ec\0\u02d0"+
-    "\0\u1428\0\u02d0\0\u1464\0\u02d0\0\u14a0\0\u14dc\0\u02d0\0\u02d0"+
-    "\0\u1518\0\u1554\0\u1590\0\u15cc\0\u02d0\0\u1608\0\u1644\0\u1680"+
-    "\0\u16bc\0\u16f8\0\u1734\0\74";
+    "\0\0\0\75\0\172\0\267\0\364\0\u0131\0\75\0\75"+
+    "\0\75\0\75\0\75\0\75\0\75\0\u016e\0\75\0\u01ab"+
+    "\0\u01e8\0\75\0\u0225\0\u0262\0\u029f\0\u02dc\0\u0319\0\u0356"+
+    "\0\u0393\0\u03d0\0\u040d\0\u044a\0\u0487\0\u04c4\0\u0501\0\75"+
+    "\0\75\0\75\0\u053e\0\u057b\0\u05b8\0\u05f5\0\u0632\0\75"+
+    "\0\75\0\75\0\364\0\75\0\u066f\0\u016e\0\u06ac\0\75"+
+    "\0\75\0\75\0\u06e9\0\u0726\0\u0763\0\u07a0\0\u07dd\0\u02dc"+
+    "\0\u081a\0\u02dc\0\u0857\0\u0894\0\u08d1\0\u090e\0\u094b\0\u0988"+
+    "\0\u09c5\0\u0a02\0\u0a3f\0\u0a7c\0\u0ab9\0\u0af6\0\u0b33\0\u0b70"+
+    "\0\u0bad\0\u06ac\0\u0bea\0\u0c27\0\u0c64\0\u0ca1\0\u02dc\0\u02dc"+
+    "\0\u0cde\0\u0d1b\0\u0d58\0\u0d95\0\u0dd2\0\u0e0f\0\u0e4c\0\u0e89"+
+    "\0\u0ec6\0\u0f03\0\u0f40\0\u0f7d\0\u0fba\0\u0ff7\0\75\0\u1034"+
+    "\0\u02dc\0\u1071\0\u10ae\0\u10eb\0\u02dc\0\u1128\0\u1165\0\u11a2"+
+    "\0\u02dc\0\u02dc\0\u11df\0\u121c\0\u1259\0\u1296\0\u12d3\0\u1310"+
+    "\0\u134d\0\u138a\0\u02dc\0\u02dc\0\u13c7\0\u02dc\0\u1404\0\u1441"+
+    "\0\u02dc\0\u147e\0\u02dc\0\u14bb\0\u02dc\0\u14f8\0\u1535\0\u02dc"+
+    "\0\u02dc\0\u1572\0\u15af\0\u15ec\0\u1629\0\u02dc\0\u1666\0\u16a3"+
+    "\0\u16e0\0\u171d\0\u175a\0\u1797\0\75";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[140];
+    int [] result = new int[141];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -182,100 +182,101 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
     "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-    "\1\22\1\23\1\24\3\25\1\26\1\27\1\30\2\25"+
-    "\1\31\3\25\1\32\1\25\1\33\1\34\1\35\1\25"+
-    "\1\36\3\25\1\37\1\40\1\41\1\2\1\25\1\42"+
-    "\1\43\2\25\1\44\4\25\1\45\1\25\1\46\1\47"+
-    "\1\50\75\0\1\3\113\0\1\51\53\0\1\52\1\0"+
-    "\1\53\11\0\2\52\4\0\26\52\4\0\15\52\12\0"+
-    "\1\54\100\0\2\55\70\0\1\55\1\0\2\20\42\0"+
-    "\1\56\25\0\1\55\1\0\2\20\76\0\1\57\73\0"+
-    "\1\60\73\0\1\61\67\0\2\25\4\0\26\25\3\0"+
-    "\16\25\17\0\2\25\4\0\4\25\1\62\21\25\3\0"+
-    "\16\25\17\0\2\25\4\0\12\25\1\63\1\25\1\64"+
-    "\11\25\3\0\16\25\17\0\2\25\4\0\12\25\1\65"+
-    "\2\25\1\66\10\25\3\0\16\25\17\0\2\25\4\0"+
-    "\5\25\1\67\6\25\1\70\3\25\1\71\5\25\3\0"+
-    "\16\25\17\0\2\25\4\0\4\25\1\72\21\25\3\0"+
-    "\16\25\17\0\2\25\4\0\17\25\1\73\6\25\3\0"+
-    "\16\25\17\0\2\25\4\0\1\74\3\25\1\75\21\25"+
-    "\3\0\16\25\17\0\2\25\4\0\7\25\1\76\11\25"+
-    "\1\77\4\25\3\0\16\25\17\0\2\25\4\0\14\25"+
-    "\1\100\11\25\3\0\16\25\17\0\2\25\4\0\26\25"+
-    "\3\0\7\25\1\101\6\25\17\0\2\25\4\0\26\25"+
-    "\3\0\7\25\1\102\6\25\17\0\2\25\4\0\26\25"+
-    "\3\0\3\25\1\67\4\25\1\103\5\25\17\0\2\25"+
-    "\4\0\26\25\3\0\5\25\1\104\6\25\1\105\1\25"+
-    "\17\0\2\25\4\0\26\25\3\0\5\25\1\106\10\25"+
-    "\3\0\1\54\2\0\1\107\3\0\1\110\4\0\2\54"+
-    "\4\0\26\54\4\0\15\54\17\0\2\111\4\0\6\111"+
-    "\24\0\3\111\31\0\2\25\4\0\2\25\1\112\23\25"+
-    "\3\0\16\25\17\0\2\25\4\0\20\25\1\113\5\25"+
-    "\3\0\16\25\17\0\2\25\4\0\3\25\1\114\22\25"+
-    "\3\0\16\25\17\0\2\25\4\0\15\25\1\115\10\25"+
-    "\3\0\16\25\17\0\2\25\4\0\17\25\1\116\6\25"+
-    "\3\0\16\25\17\0\2\25\4\0\21\25\1\117\4\25"+
-    "\3\0\16\25\17\0\2\25\4\0\25\25\1\120\3\0"+
-    "\16\25\17\0\2\25\4\0\15\25\1\121\10\25\3\0"+
-    "\16\25\17\0\2\25\4\0\14\25\1\122\11\25\3\0"+
-    "\16\25\17\0\2\25\4\0\16\25\1\123\7\25\3\0"+
-    "\16\25\17\0\2\25\4\0\15\25\1\124\10\25\3\0"+
-    "\16\25\17\0\2\25\4\0\4\25\1\125\12\25\1\126"+
-    "\6\25\3\0\16\25\17\0\2\25\4\0\21\25\1\127"+
-    "\4\25\3\0\16\25\17\0\2\25\4\0\26\25\3\0"+
-    "\13\25\1\130\2\25\17\0\2\25\4\0\26\25\3\0"+
-    "\11\25\1\131\4\25\17\0\2\25\4\0\26\25\3\0"+
-    "\14\25\1\117\1\25\17\0\2\25\4\0\26\25\3\0"+
-    "\11\25\1\132\4\25\17\0\2\25\4\0\26\25\3\0"+
-    "\12\25\1\133\3\25\17\0\2\25\4\0\26\25\3\0"+
-    "\6\25\1\134\7\25\12\0\1\135\67\0\1\136\104\0"+
-    "\2\25\4\0\23\25\1\137\2\25\3\0\16\25\17\0"+
-    "\2\25\4\0\4\25\1\140\21\25\3\0\16\25\17\0"+
-    "\2\25\4\0\3\25\1\141\4\25\1\142\15\25\3\0"+
-    "\16\25\17\0\2\25\4\0\1\143\25\25\3\0\16\25"+
-    "\17\0\2\25\4\0\21\25\1\144\4\25\3\0\16\25"+
-    "\17\0\2\25\4\0\6\25\1\145\17\25\3\0\16\25"+
-    "\17\0\2\25\4\0\6\25\1\146\17\25\3\0\16\25"+
-    "\17\0\2\25\4\0\4\25\1\147\21\25\3\0\16\25"+
-    "\17\0\2\25\4\0\24\25\1\150\1\25\3\0\16\25"+
-    "\17\0\2\25\4\0\16\25\1\151\7\25\3\0\16\25"+
-    "\17\0\2\25\4\0\10\25\1\152\15\25\3\0\16\25"+
-    "\17\0\2\25\4\0\10\25\1\153\15\25\3\0\16\25"+
-    "\17\0\2\25\4\0\26\25\3\0\2\25\1\140\13\25"+
-    "\17\0\2\25\4\0\26\25\3\0\1\25\1\154\14\25"+
-    "\17\0\2\25\4\0\26\25\3\0\15\25\1\150\17\0"+
-    "\2\25\4\0\26\25\3\0\6\25\1\155\7\25\17\0"+
-    "\2\25\4\0\26\25\3\0\7\25\1\156\6\25\3\0"+
-    "\1\135\6\0\1\157\4\0\2\135\4\0\26\135\4\0"+
-    "\15\135\17\0\2\25\4\0\1\160\25\25\3\0\16\25"+
-    "\17\0\2\25\4\0\4\25\1\161\21\25\3\0\16\25"+
-    "\17\0\2\25\4\0\5\25\1\162\20\25\3\0\16\25"+
-    "\17\0\2\25\4\0\21\25\1\163\4\25\3\0\16\25"+
-    "\17\0\2\25\4\0\17\25\1\164\6\25\3\0\16\25"+
-    "\17\0\2\25\4\0\4\25\1\165\21\25\3\0\16\25"+
-    "\17\0\2\25\4\0\1\166\25\25\3\0\16\25\17\0"+
-    "\2\25\4\0\14\25\1\167\11\25\3\0\16\25\17\0"+
-    "\2\25\4\0\12\25\1\170\13\25\3\0\16\25\17\0"+
-    "\2\25\4\0\26\25\3\0\14\25\1\163\1\25\17\0"+
-    "\2\25\4\0\26\25\3\0\10\25\1\171\5\25\17\0"+
-    "\2\25\4\0\26\25\3\0\2\25\1\172\13\25\6\0"+
-    "\1\173\104\0\2\25\4\0\17\25\1\174\6\25\3\0"+
-    "\16\25\17\0\2\25\4\0\2\25\1\175\23\25\3\0"+
-    "\16\25\17\0\2\25\4\0\1\176\25\25\3\0\16\25"+
-    "\17\0\2\25\4\0\21\25\1\177\4\25\3\0\16\25"+
-    "\17\0\2\25\4\0\6\25\1\200\17\25\3\0\16\25"+
-    "\17\0\2\25\4\0\26\25\3\0\4\25\1\200\11\25"+
-    "\3\0\1\173\6\0\1\110\4\0\2\173\4\0\26\173"+
-    "\4\0\15\173\17\0\2\25\4\0\23\25\1\201\2\25"+
-    "\3\0\16\25\17\0\2\25\4\0\13\25\1\202\12\25"+
-    "\3\0\16\25\17\0\2\25\4\0\1\203\25\25\3\0"+
-    "\16\25\15\0\1\204\1\0\2\25\4\0\26\25\3\0"+
-    "\16\25\17\0\2\25\4\0\17\25\1\205\6\25\3\0"+
-    "\16\25\45\0\1\206\57\0\1\207\71\0\1\210\112\0"+
-    "\1\211\62\0\1\212\100\0\1\213\72\0\1\214\34\0";
+    "\1\22\1\23\1\24\1\25\3\26\1\27\1\30\1\31"+
+    "\2\26\1\32\3\26\1\33\1\26\1\34\1\35\1\36"+
+    "\1\26\1\37\3\26\1\40\1\41\1\42\1\2\1\26"+
+    "\1\43\1\44\2\26\1\45\4\26\1\46\1\26\1\47"+
+    "\1\50\1\51\76\0\1\3\115\0\1\52\53\0\1\53"+
+    "\1\0\1\54\12\0\2\53\4\0\26\53\4\0\15\53"+
+    "\12\0\1\55\102\0\2\56\71\0\1\56\1\0\2\21"+
+    "\42\0\1\57\26\0\1\56\1\0\2\21\77\0\1\60"+
+    "\74\0\1\61\74\0\1\62\70\0\2\26\4\0\26\26"+
+    "\3\0\16\26\20\0\2\26\4\0\4\26\1\63\21\26"+
+    "\3\0\16\26\20\0\2\26\4\0\12\26\1\64\1\26"+
+    "\1\65\11\26\3\0\16\26\20\0\2\26\4\0\12\26"+
+    "\1\66\2\26\1\67\10\26\3\0\16\26\20\0\2\26"+
+    "\4\0\5\26\1\70\6\26\1\71\3\26\1\72\5\26"+
+    "\3\0\16\26\20\0\2\26\4\0\4\26\1\73\21\26"+
+    "\3\0\16\26\20\0\2\26\4\0\17\26\1\74\6\26"+
+    "\3\0\16\26\20\0\2\26\4\0\1\75\3\26\1\76"+
+    "\21\26\3\0\16\26\20\0\2\26\4\0\7\26\1\77"+
+    "\11\26\1\100\4\26\3\0\16\26\20\0\2\26\4\0"+
+    "\14\26\1\101\11\26\3\0\16\26\20\0\2\26\4\0"+
+    "\26\26\3\0\7\26\1\102\6\26\20\0\2\26\4\0"+
+    "\26\26\3\0\7\26\1\103\6\26\20\0\2\26\4\0"+
+    "\26\26\3\0\3\26\1\70\4\26\1\104\5\26\20\0"+
+    "\2\26\4\0\26\26\3\0\5\26\1\105\6\26\1\106"+
+    "\1\26\20\0\2\26\4\0\26\26\3\0\5\26\1\107"+
+    "\10\26\3\0\1\55\2\0\1\110\3\0\1\111\5\0"+
+    "\2\55\4\0\26\55\4\0\15\55\20\0\2\112\4\0"+
+    "\6\112\24\0\3\112\32\0\2\26\4\0\2\26\1\113"+
+    "\23\26\3\0\16\26\20\0\2\26\4\0\20\26\1\114"+
+    "\5\26\3\0\16\26\20\0\2\26\4\0\3\26\1\115"+
+    "\22\26\3\0\16\26\20\0\2\26\4\0\15\26\1\116"+
+    "\10\26\3\0\16\26\20\0\2\26\4\0\17\26\1\117"+
+    "\6\26\3\0\16\26\20\0\2\26\4\0\21\26\1\120"+
+    "\4\26\3\0\16\26\20\0\2\26\4\0\25\26\1\121"+
+    "\3\0\16\26\20\0\2\26\4\0\15\26\1\122\10\26"+
+    "\3\0\16\26\20\0\2\26\4\0\14\26\1\123\11\26"+
+    "\3\0\16\26\20\0\2\26\4\0\16\26\1\124\7\26"+
+    "\3\0\16\26\20\0\2\26\4\0\15\26\1\125\10\26"+
+    "\3\0\16\26\20\0\2\26\4\0\4\26\1\126\12\26"+
+    "\1\127\6\26\3\0\16\26\20\0\2\26\4\0\21\26"+
+    "\1\130\4\26\3\0\16\26\20\0\2\26\4\0\26\26"+
+    "\3\0\13\26\1\131\2\26\20\0\2\26\4\0\26\26"+
+    "\3\0\11\26\1\132\4\26\20\0\2\26\4\0\26\26"+
+    "\3\0\14\26\1\120\1\26\20\0\2\26\4\0\26\26"+
+    "\3\0\11\26\1\133\4\26\20\0\2\26\4\0\26\26"+
+    "\3\0\12\26\1\134\3\26\20\0\2\26\4\0\26\26"+
+    "\3\0\6\26\1\135\7\26\12\0\1\136\70\0\1\137"+
+    "\106\0\2\26\4\0\23\26\1\140\2\26\3\0\16\26"+
+    "\20\0\2\26\4\0\4\26\1\141\21\26\3\0\16\26"+
+    "\20\0\2\26\4\0\3\26\1\142\4\26\1\143\15\26"+
+    "\3\0\16\26\20\0\2\26\4\0\1\144\25\26\3\0"+
+    "\16\26\20\0\2\26\4\0\21\26\1\145\4\26\3\0"+
+    "\16\26\20\0\2\26\4\0\6\26\1\146\17\26\3\0"+
+    "\16\26\20\0\2\26\4\0\6\26\1\147\17\26\3\0"+
+    "\16\26\20\0\2\26\4\0\4\26\1\150\21\26\3\0"+
+    "\16\26\20\0\2\26\4\0\24\26\1\151\1\26\3\0"+
+    "\16\26\20\0\2\26\4\0\16\26\1\152\7\26\3\0"+
+    "\16\26\20\0\2\26\4\0\10\26\1\153\15\26\3\0"+
+    "\16\26\20\0\2\26\4\0\10\26\1\154\15\26\3\0"+
+    "\16\26\20\0\2\26\4\0\26\26\3\0\2\26\1\141"+
+    "\13\26\20\0\2\26\4\0\26\26\3\0\1\26\1\155"+
+    "\14\26\20\0\2\26\4\0\26\26\3\0\15\26\1\151"+
+    "\20\0\2\26\4\0\26\26\3\0\6\26\1\156\7\26"+
+    "\20\0\2\26\4\0\26\26\3\0\7\26\1\157\6\26"+
+    "\3\0\1\136\6\0\1\160\5\0\2\136\4\0\26\136"+
+    "\4\0\15\136\20\0\2\26\4\0\1\161\25\26\3\0"+
+    "\16\26\20\0\2\26\4\0\4\26\1\162\21\26\3\0"+
+    "\16\26\20\0\2\26\4\0\5\26\1\163\20\26\3\0"+
+    "\16\26\20\0\2\26\4\0\21\26\1\164\4\26\3\0"+
+    "\16\26\20\0\2\26\4\0\17\26\1\165\6\26\3\0"+
+    "\16\26\20\0\2\26\4\0\4\26\1\166\21\26\3\0"+
+    "\16\26\20\0\2\26\4\0\1\167\25\26\3\0\16\26"+
+    "\20\0\2\26\4\0\14\26\1\170\11\26\3\0\16\26"+
+    "\20\0\2\26\4\0\12\26\1\171\13\26\3\0\16\26"+
+    "\20\0\2\26\4\0\26\26\3\0\14\26\1\164\1\26"+
+    "\20\0\2\26\4\0\26\26\3\0\10\26\1\172\5\26"+
+    "\20\0\2\26\4\0\26\26\3\0\2\26\1\173\13\26"+
+    "\6\0\1\174\106\0\2\26\4\0\17\26\1\175\6\26"+
+    "\3\0\16\26\20\0\2\26\4\0\2\26\1\176\23\26"+
+    "\3\0\16\26\20\0\2\26\4\0\1\177\25\26\3\0"+
+    "\16\26\20\0\2\26\4\0\21\26\1\200\4\26\3\0"+
+    "\16\26\20\0\2\26\4\0\6\26\1\201\17\26\3\0"+
+    "\16\26\20\0\2\26\4\0\26\26\3\0\4\26\1\201"+
+    "\11\26\3\0\1\174\6\0\1\111\5\0\2\174\4\0"+
+    "\26\174\4\0\15\174\20\0\2\26\4\0\23\26\1\202"+
+    "\2\26\3\0\16\26\20\0\2\26\4\0\13\26\1\203"+
+    "\12\26\3\0\16\26\20\0\2\26\4\0\1\204\25\26"+
+    "\3\0\16\26\16\0\1\205\1\0\2\26\4\0\26\26"+
+    "\3\0\16\26\20\0\2\26\4\0\17\26\1\206\6\26"+
+    "\3\0\16\26\46\0\1\207\60\0\1\210\72\0\1\211"+
+    "\113\0\1\212\63\0\1\213\101\0\1\214\73\0\1\215"+
+    "\34\0";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[6000];
+    int [] result = new int[6100];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -318,13 +319,13 @@ public class Lexico implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\4\1\6\11\1\1\1\11\2\1\1\11"+
+    "\1\0\1\11\4\1\7\11\1\1\1\11\2\1\1\11"+
     "\15\1\3\11\5\1\3\11\1\0\1\11\1\0\1\1"+
     "\1\0\3\11\25\1\2\0\24\1\1\0\1\11\20\1"+
     "\1\0\13\1\1\0\10\1\1\0\1\1\6\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[140];
+    int [] result = new int[141];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -848,332 +849,339 @@ public class Lexico implements java_cup.runtime.Scanner {
             { /* cualquier otro carácter desconocido se ignora */
             }
           // fall through
-          case 49: break;
+          case 50: break;
           case 2:
             { /* ignorar espacios */
             }
           // fall through
-          case 50: break;
+          case 51: break;
           case 3:
             { guiAnalizador.mostrarTexto("Token NOT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "NOT", null);
               return new Symbol(sym.NOT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 51: break;
+          case 52: break;
           case 4:
             { guiAnalizador.mostrarTexto("Token MOD encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MOD", null);
               return new Symbol(sym.MOD, yyline, yycolumn, yytext());
             }
           // fall through
-          case 52: break;
+          case 53: break;
           case 5:
             { guiAnalizador.mostrarTexto("Token PAREN_A encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PAREN_A", null);
               return new Symbol(sym.PAREN_A, yyline, yycolumn, yytext());
             }
           // fall through
-          case 53: break;
+          case 54: break;
           case 6:
             { guiAnalizador.mostrarTexto("Token PAREN_C encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PAREN_C", null);
               return new Symbol(sym.PAREN_C, yyline, yycolumn, yytext());
             }
           // fall through
-          case 54: break;
+          case 55: break;
           case 7:
             { guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MULT", null);
               return new Symbol(sym.MULT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 55: break;
+          case 56: break;
           case 8:
             { guiAnalizador.mostrarTexto("Token SUMA encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "SUMA", null);
               return new Symbol(sym.SUMA, yyline, yycolumn, yytext());
             }
           // fall through
-          case 56: break;
+          case 57: break;
           case 9:
             { guiAnalizador.mostrarTexto("Token COMA encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "COMA", null);
               return new Symbol(sym.COMA, yyline, yycolumn, yytext());
             }
           // fall through
-          case 57: break;
+          case 58: break;
           case 10:
+            { guiAnalizador.mostrarTexto("Token RESTA encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "RESTA", null);
+              return new Symbol(sym.RESTA, yyline, yycolumn, yytext());
+            }
+          // fall through
+          case 59: break;
+          case 11:
             { guiAnalizador.mostrarTexto("Token PUNTO encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PUNTO", null);
               return new Symbol(sym.PUNTO, yyline, yycolumn, yytext());
             }
           // fall through
-          case 58: break;
-          case 11:
+          case 60: break;
+          case 12:
             { guiAnalizador.mostrarTexto("Token DIV encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "DIV", null);
               return new Symbol(sym.DIV, yyline, yycolumn, yytext());
             }
           // fall through
-          case 59: break;
-          case 12:
+          case 61: break;
+          case 13:
             { guiAnalizador.mostrarTexto("Token CONST_INT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "CONST_INT", yytext());
               return new Symbol(sym.CONST_INT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 60: break;
-          case 13:
+          case 62: break;
+          case 14:
             { guiAnalizador.mostrarTexto("Token DATA_TYPE_ASSIGN encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "DATA_TYPE_ASSIGN", null);
                return new Symbol(sym.DATA_TYPE_ASSIGN, yyline, yycolumn, yytext());
             }
           // fall through
-          case 61: break;
-          case 14:
+          case 63: break;
+          case 15:
             { guiAnalizador.mostrarTexto("Token MENOR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MENOR", null);
               return new Symbol(sym.MENOR, yyline, yycolumn, yytext());
             }
           // fall through
-          case 62: break;
-          case 15:
+          case 64: break;
+          case 16:
             { guiAnalizador.mostrarTexto("Token ASIGN encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "ASIGN", null);
               return new Symbol(sym.ASIGN, yyline, yycolumn, yytext());
             }
           // fall through
-          case 63: break;
-          case 16:
+          case 65: break;
+          case 17:
             { guiAnalizador.mostrarTexto("Token MAYOR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MAYOR", null);
               return new Symbol(sym.MAYOR, yyline, yycolumn, yytext());
             }
           // fall through
-          case 64: break;
-          case 17:
+          case 66: break;
+          case 18:
             { guiAnalizador.mostrarTexto("Token ID encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "ID", null);
               return new Symbol(sym.ID, yyline, yycolumn, yytext());
             }
           // fall through
-          case 65: break;
-          case 18:
+          case 67: break;
+          case 19:
             { guiAnalizador.mostrarTexto("Token CLASP_A encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "CLASP_A", null);
               return new Symbol(sym.CLASP_A, yyline, yycolumn, yytext());
             }
           // fall through
-          case 66: break;
-          case 19:
+          case 68: break;
+          case 20:
             { guiAnalizador.mostrarTexto("Token CLASP_C encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "CLASP_C", null);
               return new Symbol(sym.CLASP_C, yyline, yycolumn, yytext());
             }
           // fall through
-          case 67: break;
-          case 20:
+          case 69: break;
+          case 21:
             { guiAnalizador.mostrarTexto("Token POT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "POT", null);
               return new Symbol(sym.POT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 68: break;
-          case 21:
+          case 70: break;
+          case 22:
             { guiAnalizador.mostrarTexto("Token KEY_A encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "KEY_A", null);
               return new Symbol(sym.KEY_A, yyline, yycolumn, yytext());
             }
           // fall through
-          case 69: break;
-          case 22:
+          case 71: break;
+          case 23:
             { guiAnalizador.mostrarTexto("Token KEY_C encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "KEY_C", null);
               return new Symbol(sym.KEY_C, yyline, yycolumn, yytext());
             }
           // fall through
-          case 70: break;
-          case 23:
+          case 72: break;
+          case 24:
             { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "DISTINTO", null);
               return new Symbol(sym.DISTINTO, yyline, yycolumn, yytext());
             }
           // fall through
-          case 71: break;
-          case 24:
+          case 73: break;
+          case 25:
             { guiAnalizador.mostrarTexto("Token CONST_STR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "CONST_STR", yytext());
               return new Symbol(sym.CONST_STR, yyline, yycolumn, yytext());
             }
           // fall through
-          case 72: break;
-          case 25:
+          case 74: break;
+          case 26:
             { guiAnalizador.mostrarTexto("Token CONST_FLOAT encontrado, Lexema "+ yytext());
                 agregarSimbolo(yytext(), "CONST_FLOAT", yytext());
               return new Symbol(sym.CONST_FLOAT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 73: break;
-          case 26:
+          case 75: break;
+          case 27:
             { guiAnalizador.mostrarTexto("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MENOR_IGUAL", null);
               return new Symbol(sym.MENOR_IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
-          case 74: break;
-          case 27:
+          case 76: break;
+          case 28:
             { guiAnalizador.mostrarTexto("Token IGUAL encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "IGUAL", null);
               return new Symbol(sym.IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
-          case 75: break;
-          case 28:
+          case 77: break;
+          case 29:
             { guiAnalizador.mostrarTexto("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "MAYOR_IGUAL", null);
               return new Symbol(sym.MAYOR_IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
-          case 76: break;
-          case 29:
+          case 78: break;
+          case 30:
             { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_IF", null);
               return new Symbol(sym.PR_IF, yyline, yycolumn, yytext());
             }
           // fall through
-          case 77: break;
-          case 30:
+          case 79: break;
+          case 31:
             { guiAnalizador.mostrarTexto("Token PR_IS encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_IS", null);
               return new Symbol(sym.PR_IS, yyline, yycolumn, yytext());
             }
           // fall through
-          case 78: break;
-          case 31:
+          case 80: break;
+          case 32:
             { guiAnalizador.mostrarTexto("Token CONST_HEX encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "CONST_HEX", yytext());
               return new Symbol(sym.CONST_HEX, yyline, yycolumn, yytext());
             }
           // fall through
-          case 79: break;
-          case 32:
+          case 81: break;
+          case 33:
             { guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_FOR", null);
               return new Symbol(sym.PR_FOR, yyline, yycolumn, yytext());
             }
           // fall through
-          case 80: break;
-          case 33:
+          case 82: break;
+          case 34:
             { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_INT", null);
               return new Symbol(sym.PR_INT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 81: break;
-          case 34:
+          case 83: break;
+          case 35:
             { /* ignorar comentarios */
             }
           // fall through
-          case 82: break;
-          case 35:
+          case 84: break;
+          case 36:
             { guiAnalizador.mostrarTexto("Token PR_ELSE encontrado, Lexema "+ yytext());
                 agregarSimbolo(yytext(), "PR_ELSE", null);
               return new Symbol(sym.PR_ELSE, yyline, yycolumn, yytext());
             }
           // fall through
-          case 83: break;
-          case 36:
+          case 85: break;
+          case 37:
             { guiAnalizador.mostrarTexto("Token PR_NEXT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_NEXT", null);
               return new Symbol(sym.PR_NEXT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 84: break;
-          case 37:
+          case 86: break;
+          case 38:
             { guiAnalizador.mostrarTexto("Token SHOW encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "SHOW", null);
               return new Symbol(sym.SHOW, yyline, yycolumn, yytext());
             }
           // fall through
-          case 85: break;
-          case 38:
+          case 87: break;
+          case 39:
             { guiAnalizador.mostrarTexto("Token PR_STEP encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_STEP", null);
               return new Symbol(sym.PR_STEP, yyline, yycolumn, yytext());
             }
           // fall through
-          case 86: break;
-          case 39:
+          case 88: break;
+          case 40:
             { guiAnalizador.mostrarTexto("Token PR_ENDIF encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_ENDIF", null);
               return new Symbol(sym.PR_ENDIF, yyline, yycolumn, yytext());
             }
           // fall through
-          case 87: break;
-          case 40:
+          case 89: break;
+          case 41:
             { guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_FLOAT", null);
               return new Symbol(sym.PR_FLOAT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 88: break;
-          case 41:
+          case 90: break;
+          case 42:
             { guiAnalizador.mostrarTexto("Token PR_RANGE encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_RANGE", null);
               return new Symbol(sym.PR_RANGE, yyline, yycolumn, yytext());
             }
           // fall through
-          case 89: break;
-          case 42:
+          case 91: break;
+          case 43:
             { guiAnalizador.mostrarTexto("Token PR_UNTIL encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_UNTIL", null);
               return new Symbol(sym.PR_UNTIL, yyline, yycolumn, yytext());
             }
           // fall through
-          case 90: break;
-          case 43:
+          case 92: break;
+          case 44:
             { guiAnalizador.mostrarTexto("Token PR_WHILE encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_WHILE", null);
               return new Symbol(sym.PR_WHILE, yyline, yycolumn, yytext());
             }
           // fall through
-          case 91: break;
-          case 44:
+          case 93: break;
+          case 45:
             { guiAnalizador.mostrarTexto("Token DEC_VAR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "DEC_VAR", null);
               return new Symbol(sym.DEC_VAR, yyline, yycolumn, yytext());
             }
           // fall through
-          case 92: break;
-          case 45:
+          case 94: break;
+          case 46:
             { guiAnalizador.mostrarTexto("Token PR_REPEAT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_REPEAT", null);
               return new Symbol(sym.PR_REPEAT, yyline, yycolumn, yytext());
             }
           // fall through
-          case 93: break;
-          case 46:
+          case 95: break;
+          case 47:
             { guiAnalizador.mostrarTexto("Token PR_STRING encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_STRING", null);
               return new Symbol(sym.PR_STRING, yyline, yycolumn, yytext());
             }
           // fall through
-          case 94: break;
-          case 47:
+          case 96: break;
+          case 48:
             { guiAnalizador.mostrarTexto("Token END_DEC_VAR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "END_DEC_VAR", null);
               return new Symbol(sym.END_DEC_VAR, yyline, yycolumn, yytext());
             }
           // fall through
-          case 95: break;
-          case 48:
+          case 97: break;
+          case 49:
             { guiAnalizador.mostrarTexto("Token PR_PROGRAM encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_PROGRAM", null);
               return new Symbol(sym.PR_PROGRAM, yyline, yycolumn, yytext());
             }
           // fall through
-          case 96: break;
+          case 98: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
