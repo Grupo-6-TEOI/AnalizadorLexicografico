@@ -46,139 +46,186 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
 <YYINITIAL> {
 
 ":"         { guiAnalizador.mostrarTexto("Token DATA_TYPE_ASSIGN encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "DATA_TYPE_ASSIGN", null); }
+              agregarSimbolo(yytext(), "DATA_TYPE_ASSIGN", null);
+               return new Symbol(sym.DATA_TYPE_ASSIGN, yyline, yycolumn, yytext());
+      }
 
 "="         { guiAnalizador.mostrarTexto("Token ASIGN encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "ASIGN", null); }
-
-":="        { guiAnalizador.mostrarTexto("Token CONST encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "CONST", null); }
+              agregarSimbolo(yytext(), "ASIGN", null);
+              return new Symbol(sym.ASIGN, yyline, yycolumn, yytext());
+      }
 
 "+"         { guiAnalizador.mostrarTexto("Token SUMA encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "SUMA", null); }
+              agregarSimbolo(yytext(), "SUMA", null);
+              return new Symbol(sym.SUMA, yyline, yycolumn, yytext()); }
 
 "*"         { guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MULT", null); }
+              agregarSimbolo(yytext(), "MULT", null);
+              return new Symbol(sym.MULT, yyline, yycolumn, yytext()); }
 
 "/"         { guiAnalizador.mostrarTexto("Token DIV encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "DIV", null); }
+              agregarSimbolo(yytext(), "DIV", null);
+              return new Symbol(sym.DIV, yyline, yycolumn, yytext()); }
 
 "%"         { guiAnalizador.mostrarTexto("Token MOD encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MOD", null); }
+              agregarSimbolo(yytext(), "MOD", null);
+              return new Symbol(sym.MOD, yyline, yycolumn, yytext()); }
 
 "^"         { guiAnalizador.mostrarTexto("Token POT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "POT", null); }
+              agregarSimbolo(yytext(), "POT", null);
+              return new Symbol(sym.POT, yyline, yycolumn, yytext()); }
 
 "DECVAR"    { guiAnalizador.mostrarTexto("Token DEC_VAR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "DEC_VAR", null); }
+              agregarSimbolo(yytext(), "DEC_VAR", null);
+              return new Symbol(sym.DEC_VAR, yyline, yycolumn, yytext()); }
 
 "ENDDECVAR" { guiAnalizador.mostrarTexto("Token END_DEC_VAR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "END_DEC_VAR", null); }
+              agregarSimbolo(yytext(), "END_DEC_VAR", null);
+              return new Symbol(sym.END_DEC_VAR, yyline, yycolumn, yytext()); }
 
 "FOR"       { guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_FOR", null); }
+              agregarSimbolo(yytext(), "PR_FOR", null);
+              return new Symbol(sym.PR_FOR, yyline, yycolumn, yytext()); }
 
 "IS"        { guiAnalizador.mostrarTexto("Token PR_IS encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_IS", null); }
+              agregarSimbolo(yytext(), "PR_IS", null);
+              return new Symbol(sym.PR_IS, yyline, yycolumn, yytext()); }
 
 "RANGE"     { guiAnalizador.mostrarTexto("Token PR_RANGE encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_RANGE", null); }
+              agregarSimbolo(yytext(), "PR_RANGE", null);
+              return new Symbol(sym.PR_RANGE, yyline, yycolumn, yytext()); }
 
 "STEP"      { guiAnalizador.mostrarTexto("Token PR_STEP encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_STEP", null); }
+              agregarSimbolo(yytext(), "PR_STEP", null);
+              return new Symbol(sym.PR_STEP, yyline, yycolumn, yytext()); }
 
 "NEXT"      { guiAnalizador.mostrarTexto("Token PR_NEXT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_NEXT", null); }
+              agregarSimbolo(yytext(), "PR_NEXT", null);
+              return new Symbol(sym.PR_NEXT, yyline, yycolumn, yytext()); }
 
 "while"     { guiAnalizador.mostrarTexto("Token PR_WHILE encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_WHILE", null); }
+              agregarSimbolo(yytext(), "PR_WHILE", null);
+              return new Symbol(sym.PR_WHILE, yyline, yycolumn, yytext()); }
 
 "if"|"IF"   { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_IF", null); }
+              agregarSimbolo(yytext(), "PR_IF", null);
+              return new Symbol(sym.PR_IF, yyline, yycolumn, yytext()); }
 
 "else"|"ELSE" { guiAnalizador.mostrarTexto("Token PR_ELSE encontrado, Lexema "+ yytext());
-                agregarSimbolo(yytext(), "PR_ELSE", null); }
+                agregarSimbolo(yytext(), "PR_ELSE", null);
+              return new Symbol(sym.PR_ELSE, yyline, yycolumn, yytext()); }
 
 "ENDIF"     { guiAnalizador.mostrarTexto("Token PR_ENDIF encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_ENDIF", null); }
+              agregarSimbolo(yytext(), "PR_ENDIF", null);
+              return new Symbol(sym.PR_ENDIF, yyline, yycolumn, yytext()); }
 
 "REPEAT"    { guiAnalizador.mostrarTexto("Token PR_REPEAT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_REPEAT", null); }
+              agregarSimbolo(yytext(), "PR_REPEAT", null);
+              return new Symbol(sym.PR_REPEAT, yyline, yycolumn, yytext()); }
 
 "UNTIL"     { guiAnalizador.mostrarTexto("Token PR_UNTIL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_UNTIL", null); }
+              agregarSimbolo(yytext(), "PR_UNTIL", null);
+              return new Symbol(sym.PR_UNTIL, yyline, yycolumn, yytext()); }
 
-"int"       { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_INT", null); }
+"PROGRAM.SECTION"     { guiAnalizador.mostrarTexto("Token PR_PROGRAM encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "PR_PROGRAM", null);
+              return new Symbol(sym.PR_PROGRAM, yyline, yycolumn, yytext()); }
 
-"float"     { guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_FLOAT", null); }
+"int"|"INT"  { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "PR_INT", null);
+              return new Symbol(sym.PR_INT, yyline, yycolumn, yytext()); }
 
-"show"      { guiAnalizador.mostrarTexto("Token SHOW encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "SHOW", null); }
+"float"|"FLOAT" { guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "PR_FLOAT", null);
+              return new Symbol(sym.PR_FLOAT, yyline, yycolumn, yytext()); }
+
+"string"|"STRING" { guiAnalizador.mostrarTexto("Token PR_STRING encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "PR_STRING", null);
+              return new Symbol(sym.PR_STRING, yyline, yycolumn, yytext()); }
+
+"show"|"SHOW"      { guiAnalizador.mostrarTexto("Token SHOW encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "SHOW", null);
+              return new Symbol(sym.SHOW, yyline, yycolumn, yytext()); }
 
 "["         { guiAnalizador.mostrarTexto("Token CLASP_A encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "CLASP_A", null); }
+              agregarSimbolo(yytext(), "CLASP_A", null);
+              return new Symbol(sym.CLASP_A, yyline, yycolumn, yytext()); }
 
 "]"         { guiAnalizador.mostrarTexto("Token CLASP_C encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "CLASP_C", null); }
+              agregarSimbolo(yytext(), "CLASP_C", null);
+              return new Symbol(sym.CLASP_C, yyline, yycolumn, yytext()); }
 
 "("         { guiAnalizador.mostrarTexto("Token PAREN_A encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PAREN_A", null); }
+              agregarSimbolo(yytext(), "PAREN_A", null);
+              return new Symbol(sym.PAREN_A, yyline, yycolumn, yytext()); }
 
 ")"         { guiAnalizador.mostrarTexto("Token PAREN_C encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PAREN_C", null); }
+              agregarSimbolo(yytext(), "PAREN_C", null);
+              return new Symbol(sym.PAREN_C, yyline, yycolumn, yytext()); }
 
 "{"         { guiAnalizador.mostrarTexto("Token KEY_A encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "KEY_A", null); }
+              agregarSimbolo(yytext(), "KEY_A", null);
+              return new Symbol(sym.KEY_A, yyline, yycolumn, yytext()); }
 
 "}"         { guiAnalizador.mostrarTexto("Token KEY_C encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "KEY_C", null); }
+              agregarSimbolo(yytext(), "KEY_C", null);
+              return new Symbol(sym.KEY_C, yyline, yycolumn, yytext()); }
 
 "."         { guiAnalizador.mostrarTexto("Token PUNTO encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PUNTO", null); }
+              agregarSimbolo(yytext(), "PUNTO", null);
+              return new Symbol(sym.PUNTO, yyline, yycolumn, yytext()); }
 
 ","         { guiAnalizador.mostrarTexto("Token COMA encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "COMA", null); }
+              agregarSimbolo(yytext(), "COMA", null);
+              return new Symbol(sym.COMA, yyline, yycolumn, yytext()); }
 
 "=="        { guiAnalizador.mostrarTexto("Token IGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "IGUAL", null); }
+              agregarSimbolo(yytext(), "IGUAL", null);
+              return new Symbol(sym.IGUAL, yyline, yycolumn, yytext()); }
 
 "<="        { guiAnalizador.mostrarTexto("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MENOR_IGUAL", null); }
+              agregarSimbolo(yytext(), "MENOR_IGUAL", null);
+              return new Symbol(sym.MENOR_IGUAL, yyline, yycolumn, yytext()); }
 
 ">="        { guiAnalizador.mostrarTexto("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MAYOR_IGUAL", null); }
+              agregarSimbolo(yytext(), "MAYOR_IGUAL", null);
+              return new Symbol(sym.MAYOR_IGUAL, yyline, yycolumn, yytext()); }
 
 "<"         { guiAnalizador.mostrarTexto("Token MENOR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MENOR", null); }
+              agregarSimbolo(yytext(), "MENOR", null);
+              return new Symbol(sym.MENOR, yyline, yycolumn, yytext()); }
 
 ">"         { guiAnalizador.mostrarTexto("Token MAYOR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MAYOR", null); }
+              agregarSimbolo(yytext(), "MAYOR", null);
+              return new Symbol(sym.MAYOR, yyline, yycolumn, yytext()); }
 
 "!="        { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "DISTINTO", null); }
+              agregarSimbolo(yytext(), "DISTINTO", null);
+              return new Symbol(sym.DISTINTO, yyline, yycolumn, yytext()); }
 
 "!"         { guiAnalizador.mostrarTexto("Token NOT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "NOT", null); }
-
-"+="        { guiAnalizador.mostrarTexto("Token MASIGUAL encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "MASIGUAL", null); }
+              agregarSimbolo(yytext(), "NOT", null);
+              return new Symbol(sym.NOT, yyline, yycolumn, yytext()); }
 
 {ID}        { guiAnalizador.mostrarTexto("Token ID encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "ID", null); }
+              agregarSimbolo(yytext(), "ID", null);
+              return new Symbol(sym.ID, yyline, yycolumn, yytext()); }
 
 {CONST_HEX} { guiAnalizador.mostrarTexto("Token CONST_HEX encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "CONST_HEX", yytext()); }
+              agregarSimbolo(yytext(), "CONST_HEX", yytext());
+              return new Symbol(sym.CONST_HEX, yyline, yycolumn, yytext()); }
 
 {CONST_FLOAT} { guiAnalizador.mostrarTexto("Token CONST_FLOAT encontrado, Lexema "+ yytext());
-                agregarSimbolo(yytext(), "CONST_FLOAT", yytext()); }
+                agregarSimbolo(yytext(), "CONST_FLOAT", yytext());
+              return new Symbol(sym.CONST_FLOAT, yyline, yycolumn, yytext()); }
 
 {CONST_INT} { guiAnalizador.mostrarTexto("Token CONST_INT encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "CONST_INT", yytext()); }
+              agregarSimbolo(yytext(), "CONST_INT", yytext());
+              return new Symbol(sym.CONST_INT, yyline, yycolumn, yytext()); }
 
 {CONST_STR} { guiAnalizador.mostrarTexto("Token CONST_STR encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "CONST_STR", yytext()); }
+              agregarSimbolo(yytext(), "CONST_STR", yytext());
+              return new Symbol(sym.CONST_STR, yyline, yycolumn, yytext()); }
 
 {ESPACIO}   { /* ignorar espacios */ }
 
@@ -188,7 +235,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
 
 <<EOF>> {
     tabla.writeToFile();
-    return null;
+    return new Symbol(sym.EOF);
 }
 
 

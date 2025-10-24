@@ -1,0 +1,128 @@
+import java_cup.runtime.Symbol;
+
+parser code {:
+    public void syntax_error(Symbol s) {
+        System.out.println("Error de sintaxis en línea " + (s.left + 1) + ", token: " + s.value);
+    }
+:};
+
+terminal DATA_TYPE_ASSIGN, ASIGN, SUMA, MULT, DIV, MOD, POT;
+terminal DEC_VAR, END_DEC_VAR;
+terminal PR_FOR, PR_IS, PR_RANGE, PR_STEP, PR_NEXT, PR_WHILE, PR_IF, PR_ELSE, PR_ENDIF, PR_REPEAT, PR_UNTIL, PR_PROGRAM;
+terminal PR_INT, PR_FLOAT, PR_STRING, SHOW;
+terminal CLASP_A, CLASP_C, PAREN_A, PAREN_C, KEY_A, KEY_C;
+terminal PUNTO, COMA;
+terminal IGUAL, MENOR_IGUAL, MAYOR_IGUAL, MENOR, MAYOR, DISTINTO, NOT;
+terminal ID, CONST_HEX, CONST_FLOAT, CONST_INT, CONST_STR;
+
+non terminal Programa, Declaraciones, Declaracion, Tipo, Sentencias, Sentencia, Asignacion, Expresion, Termino, Factor,ListaDeclaraciones;
+non terminal BloqueFor, BloqueIf, BloqueRepeat, BloqueShow, Condicion, OperadorComparacion, OperadorAritmetico, ProgramaPrincipal;
+
+start with Programa;
+
+Programa ::=
+      Declaraciones ProgramaPrincipal
+    | ProgramaPrincipal
+    ;
+
+Declaraciones ::=
+      DEC_VAR ListaDeclaraciones END_DEC_VAR
+    ;
+
+ListaDeclaraciones ::=
+      ListaDeclaraciones Declaracion
+    | Declaracion
+    ;
+
+Declaracion ::=
+      ID DATA_TYPE_ASSIGN Tipo
+    ;
+
+Tipo ::=
+      PR_INT
+    | PR_FLOAT
+    | PR_STRING
+    ;
+
+ProgramaPrincipal ::=
+      PR_PROGRAM Sentencias
+    ;
+
+Sentencias ::=
+      Sentencias Sentencia
+    | Sentencia
+    ;
+
+Sentencia ::=
+      Asignacion
+    | BloqueFor
+    | BloqueIf
+    | BloqueRepeat
+    | BloqueShow
+    ;
+
+Asignacion ::=
+      ID ASIGN Expresion
+    ;
+
+Expresion ::=
+      Expresion SUMA Termino
+    | Expresion MOD Termino
+    | Termino
+    ;
+
+Termino ::=
+      Termino MULT Factor
+    | Termino DIV Factor
+    | Factor
+    ;
+
+Factor ::=
+      PAREN_A Expresion PAREN_C
+    | ID
+    | CONST_INT
+    | CONST_FLOAT
+    | CONST_HEX
+    | CONST_STR
+    ;
+
+BloqueFor ::=
+      PR_FOR ID PR_IS PR_RANGE CLASP_A Expresion CLASP_C KEY_A PR_STEP CONST_INT KEY_C Sentencias PR_NEXT ID
+    | PR_FOR ID PR_IS PR_RANGE CLASP_A Expresion CLASP_C Sentencias PR_NEXT ID
+    ;
+
+BloqueIf ::=
+      PR_IF PAREN_A Condicion PAREN_C Sentencias PR_ELSE Sentencias PR_ENDIF
+    | PR_IF PAREN_A Condicion PAREN_C Sentencias PR_ENDIF
+    ;
+
+BloqueRepeat ::=
+      PR_REPEAT Sentencias PR_UNTIL PAREN_A Condicion PAREN_C
+    ;
+
+BloqueShow ::=
+      SHOW Expresion
+    ;
+
+Condicion ::=
+      Expresion OperadorComparacion Expresion
+    | NOT PAREN_A Condicion PAREN_C
+    | PAREN_A Condicion PAREN_C
+    ;
+
+OperadorComparacion ::=
+      IGUAL
+    | MENOR
+    | MAYOR
+    | MENOR_IGUAL
+    | MAYOR_IGUAL
+    | DISTINTO
+    ;
+
+OperadorAritmetico ::=
+      SUMA
+    | MULT
+    | DIV
+    | MOD
+    | POT
+    ;

@@ -1,3 +1,5 @@
+import java_cup.runtime.Symbol;
+
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -62,9 +64,20 @@ public class GuiAnalizador {
             lexer = new Lexico(reader);
             lexer.setGui(this);
             output.setText("");
-            while (lexer.next_token() != null) {}
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+
+//            Symbol s = lexer.next_token();
+//            while (s.sym != sym.EOF) {
+//                System.out.println(s.sym + " -> " + s.value + " - " + s.left + " - " + s.right);
+//                s = lexer.next_token();
+//            }
+
+            Sintactico sintactico = new Sintactico(lexer);
+            sintactico.parse();
+
+            System.out.println("Análisis completado sin errores.");
+        } catch (Exception e) {
+            System.out.println("error al analizar: " + e.toString());;
+            e.printStackTrace();
         }
     }
 
