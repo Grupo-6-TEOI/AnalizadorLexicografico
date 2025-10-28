@@ -12,7 +12,7 @@ terminal PR_FOR, PR_IS, PR_RANGE, PR_STEP, PR_NEXT, PR_WHILE, PR_IF, PR_ELSE, PR
 terminal PR_INT, PR_FLOAT, PR_STRING, SHOW;
 terminal CLASP_A, CLASP_C, PAREN_A, PAREN_C, KEY_A, KEY_C;
 terminal PUNTO, COMA;
-terminal IGUAL, MENOR_IGUAL, MAYOR_IGUAL, MENOR, MAYOR, DISTINTO, NOT;
+terminal IGUAL, MENOR_IGUAL, MAYOR_IGUAL, MENOR, MAYOR, DISTINTO, NOT, AND, OR;
 terminal ID, CONST_HEX, CONST_FLOAT, CONST_INT, CONST_STR;
 
 non terminal Programa, Declaraciones, Declaracion, Tipo, Sentencias, Sentencia, Asignacion, Expresion, Termino, Factor,ListaDeclaraciones;
@@ -108,6 +108,8 @@ BloqueShow ::=
 Condicion ::=
       Expresion OperadorComparacion Expresion
     | NOT PAREN_A Condicion PAREN_C
+    | PAREN_A Condicion PAREN_C AND PAREN_A Condicion PAREN_C
+    | PAREN_A Condicion PAREN_C OR PAREN_A Condicion PAREN_C
     | PAREN_A Condicion PAREN_C
     ;
 

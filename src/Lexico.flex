@@ -203,6 +203,14 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
               agregarSimbolo(yytext(), "MAYOR", null);
               return new Symbol(sym.MAYOR, yyline, yycolumn, yytext()); }
 
+"||"         { guiAnalizador.mostrarTexto("Token OR encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "OR", null);
+              return new Symbol(sym.OR, yyline, yycolumn, yytext()); }
+
+"&&"         { guiAnalizador.mostrarTexto("Token AND encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "AND", null);
+              return new Symbol(sym.AND, yyline, yycolumn, yytext()); }
+
 "!="        { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "DISTINTO", null);
               return new Symbol(sym.DISTINTO, yyline, yycolumn, yytext()); }

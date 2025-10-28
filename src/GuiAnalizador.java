@@ -1,6 +1,7 @@
 import java_cup.runtime.Symbol;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
@@ -73,10 +74,11 @@ public class GuiAnalizador {
 
             Sintactico sintactico = new Sintactico(lexer);
             sintactico.parse();
-
+            ingresarButton.setBackground(Color.green);
             System.out.println("Análisis completado sin errores.");
         } catch (Exception e) {
             System.out.println("error al analizar: " + e.toString());;
+            ingresarButton.setBackground(Color.green);
             e.printStackTrace();
         }
     }
