@@ -53,7 +53,9 @@ public class TablaDeSimbolo {
         if (symbolsByKey.containsKey(key)) {
             Simbolo s = symbolsByKey.get(key);
             s.setType(tipo);
-            symbolsByKey.put(key,s);
+            symbolsByKey.put(key, s);
+        } else {
+            System.out.println("Advertencia: no se encontró símbolo para " + simbolo.value);
         }
     }
 

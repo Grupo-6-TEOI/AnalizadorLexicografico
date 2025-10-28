@@ -27,9 +27,9 @@ public class sym {
   public static final int DIV = 6;
   public static final int DEC_VAR = 10;
   public static final int SUMA = 4;
-  public static final int CONST_FLOAT = 47;
+  public static final int CONST_FLOAT = 46;
   public static final int DATA_TYPE_ASSIGN = 2;
-  public static final int ID = 45;
+  public static final int ID = 49;
   public static final int EOF = 0;
   public static final int PR_PROGRAM = 23;
   public static final int PR_STEP = 15;
@@ -48,14 +48,14 @@ public class sym {
   public static final int PR_RANGE = 14;
   public static final int ASIGN = 3;
   public static final int PAREN_C = 31;
-  public static final int CONST_STR = 49;
+  public static final int CONST_STR = 48;
   public static final int PAREN_A = 30;
   public static final int MENOR_IGUAL = 37;
   public static final int PR_UNTIL = 22;
   public static final int PR_REPEAT = 21;
   public static final int PR_NEXT = 16;
-  public static final int CONST_INT = 48;
-  public static final int CONST_HEX = 46;
+  public static final int CONST_INT = 47;
+  public static final int CONST_HEX = 45;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
@@ -102,11 +102,11 @@ public class sym {
   "NOT",
   "AND",
   "OR",
-  "ID",
   "CONST_HEX",
   "CONST_FLOAT",
   "CONST_INT",
-  "CONST_STR"
+  "CONST_STR",
+  "ID"
   };
 }
 

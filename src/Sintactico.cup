@@ -1,4 +1,6 @@
 import java_cup.runtime.Symbol;
+import java.util.*;
+import TablaDeSimbolo;
 
 parser code {:
     public void syntax_error(Symbol s) {
@@ -13,9 +15,12 @@ terminal PR_INT, PR_FLOAT, PR_STRING, SHOW;
 terminal CLASP_A, CLASP_C, PAREN_A, PAREN_C, KEY_A, KEY_C;
 terminal PUNTO, COMA;
 terminal IGUAL, MENOR_IGUAL, MAYOR_IGUAL, MENOR, MAYOR, DISTINTO, NOT, AND, OR;
-terminal ID, CONST_HEX, CONST_FLOAT, CONST_INT, CONST_STR;
+terminal CONST_HEX, CONST_FLOAT, CONST_INT, CONST_STR;
+terminal Symbol ID;
 
-non terminal Programa, Declaraciones, Declaracion, Tipo, Sentencias, Sentencia, Asignacion, Expresion, Termino, Factor,ListaDeclaraciones;
+
+non terminal Programa, Declaraciones, Declaracion, Sentencias, Sentencia, Asignacion, Expresion, Termino, Factor,ListaDeclaraciones;
+non terminal String Tipo;
 non terminal BloqueFor, BloqueIf, BloqueRepeat, BloqueShow, Condicion, OperadorComparacion, OperadorAritmetico, ProgramaPrincipal;
 
 start with Programa;
@@ -29,19 +34,24 @@ Declaraciones ::=
       DEC_VAR ListaDeclaraciones END_DEC_VAR
     ;
 
+
+
 ListaDeclaraciones ::=
       ListaDeclaraciones Declaracion
     | Declaracion
     ;
 
-Declaracion ::=
-      ID DATA_TYPE_ASSIGN Tipo
-    ;
+
+Declaracion ::= ID:id DATA_TYPE_ASSIGN Tipo:t {:
+    TablaDeSimbolo.getInstance().addtype(id, t);
+:};
+
+
 
 Tipo ::=
-      PR_INT
-    | PR_FLOAT
-    | PR_STRING
+      PR_INT    {: RESULT = "int";   :}
+    | PR_FLOAT  {: RESULT = "float"; :}
+    | PR_STRING {: RESULT = "string";:}
     ;
 
 ProgramaPrincipal ::=

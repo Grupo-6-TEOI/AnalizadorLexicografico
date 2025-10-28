@@ -1,73 +1,73 @@
-NOMBRE                           TOKEN        VALOR                            LONGITUD
-------                           -----        -----                            --------
-DECVAR                           DEC_VAR      -                                6       
-numero                           ID           -                                6       
-:                                DATA_TYPE_ASSIGN -                                1       
-INT                              PR_INT       -                                3       
-cont                             ID           -                                4       
-a1                               ID           -                                2       
-FLOAT                            PR_FLOAT     -                                5       
-b2                               ID           -                                2       
-texto                            ID           -                                5       
-STRING                           PR_STRING    -                                6       
-hexVar                           ID           -                                6       
-valorReal                        ID           -                                9       
-cadenaLarga                      ID           -                                11      
-ENDDECVAR                        END_DEC_VAR  -                                9       
-PROGRAM.SECTION                  PR_PROGRAM   -                                15      
-=                                ASIGN        -                                1       
-2                                CONST_INT    2                                1       
-0                                CONST_INT    0                                1       
-25.75                            CONST_FLOAT  25.75                            5       
-100                              CONST_INT    100                              3       
-"Hola Mundo"                     CONST_STR    "Hola Mundo"                     12      
-0hFF                             CONST_HEX    0hFF                             4       
-99999.99                         CONST_FLOAT  99999.99                         8       
-sdADaSjfla                       ID           -                                10      
-%                                MOD          -                                1       
-dfg                              ID           -                                3       
-FOR                              PR_FOR       -                                3       
-al                               ID           -                                2       
-IS                               PR_IS        -                                2       
-RANGE                            PR_RANGE     -                                5       
-[                                CLASP_A      -                                1       
-*                                MULT         -                                1       
-+                                SUMA         -                                1       
-8                                CONST_INT    8                                1       
-]                                CLASP_C      -                                1       
-{                                KEY_A        -                                1       
-STEP                             PR_STEP      -                                4       
-}                                KEY_C        -                                1       
-1                                CONST_INT    1                                1       
-NEXT                             PR_NEXT      -                                4       
-IF                               PR_IF        -                                2       
-(                                PAREN_A      -                                1       
->                                MAYOR        -                                1       
-5                                CONST_INT    5                                1       
-)                                PAREN_C      -                                1       
-"El numero es mayor a 5"         CONST_STR    "El numero es mayor a 5"         24      
-ELSE                             PR_ELSE      -                                4       
-"El numero es menor o igual a 5" CONST_STR    "El numero es menor o igual a 5" 32      
-ENDIF                            PR_ENDIF     -                                5       
-99.                              CONST_FLOAT  99.                              3       
-.9999                            CONST_FLOAT  .9999                            5       
-32767                            CONST_INT    32767                            5       
-123.456                          CONST_FLOAT  123.456                          7       
-"HOLA MUNDO"                     CONST_STR    "HOLA MUNDO"                     12      
-"Cadena de 30 caracteres max"    CONST_STR    "Cadena de 30 caracteres max"    29      
-0hA3F                            CONST_HEX    0hA3F                            5       
-0h1B                             CONST_HEX    0h1B                             4       
-show                             SHOW         -                                4       
-"ewr"                            CONST_STR    "ewr"                            5       
-99.999                           CONST_FLOAT  99.999                           6       
->=                               MAYOR_IGUAL  -                                2       
-50                               CONST_INT    50                               2       
-&&                               AND          -                                2       
-<                                MENOR        -                                1       
-10                               CONST_INT    10                               2       
-"Condicion compleja verdadera"   CONST_STR    "Condicion compleja verdadera"   30      
-"Condicion compleja falsa"       CONST_STR    "Condicion compleja falsa"       26      
-REPEAT                           PR_REPEAT    -                                6       
--                                RESTA        -                                1       
-UNTIL                            PR_UNTIL     -                                5       
-<=                               MENOR_IGUAL  -                                2       
+NOMBRE               TOKEN        VALOR                LONGITUD   TIPO      
+------               -----        -----                --------   ----      
+DECVAR               DEC_VAR      -                    6          -         
+numero               ID           -                    6          int       
+:                    DATA_TYPE_ASSIGN -                    1          -         
+INT                  PR_INT       -                    3          -         
+cont                 ID           -                    4          int       
+a1                   ID           -                    2          float     
+FLOAT                PR_FLOAT     -                    5          -         
+b2                   ID           -                    2          int       
+texto                ID           -                    5          string    
+STRING               PR_STRING    -                    6          -         
+hexVar               ID           -                    6          int       
+valorReal            ID           -                    9          float     
+cadenaLarga          ID           -                    11         string    
+ENDDECVAR            END_DEC_VAR  -                    9          -         
+PROGRAM.SECTION      PR_PROGRAM   -                    15         -         
+=                    ASIGN        -                    1          -         
+2                    CONST_INT    2                    1          -         
+0                    CONST_INT    0                    1          -         
+25.75                CONST_FLOAT  25.75                5          -         
+100                  CONST_INT    100                  3          -         
+"Hola Mundo"         CONST_STR    "Hola Mundo"         12         -         
+0hFF                 CONST_HEX    0hFF                 4          -         
+99999.99             CONST_FLOAT  99999.99             8          -         
+sdADaSjfla           ID           -                    10         -         
+%                    MOD          -                    1          -         
+dfg                  ID           -                    3          -         
+FOR                  PR_FOR       -                    3          -         
+al                   ID           -                    2          -         
+IS                   PR_IS        -                    2          -         
+RANGE                PR_RANGE     -                    5          -         
+[                    CLASP_A      -                    1          -         
+*                    MULT         -                    1          -         
++                    SUMA         -                    1          -         
+8                    CONST_INT    8                    1          -         
+]                    CLASP_C      -                    1          -         
+{                    KEY_A        -                    1          -         
+STEP                 PR_STEP      -                    4          -         
+}                    KEY_C        -                    1          -         
+1                    CONST_INT    1                    1          -         
+NEXT                 PR_NEXT      -                    4          -         
+IF                   PR_IF        -                    2          -         
+(                    PAREN_A      -                    1          -         
+>                    MAYOR        -                    1          -         
+5                    CONST_INT    5                    1          -         
+)                    PAREN_C      -                    1          -         
+"El numero es mayor a 5" CONST_STR    "El numero es mayor a 5" 24         -         
+ELSE                 PR_ELSE      -                    4          -         
+"El numero es menor o igual a 5" CONST_STR    "El numero es menor o igual a 5" 32         -         
+ENDIF                PR_ENDIF     -                    5          -         
+99.                  CONST_FLOAT  99.                  3          -         
+.9999                CONST_FLOAT  .9999                5          -         
+32767                CONST_INT    32767                5          -         
+123.456              CONST_FLOAT  123.456              7          -         
+"HOLA MUNDO"         CONST_STR    "HOLA MUNDO"         12         -         
+"Cadena de 30 caracteres max" CONST_STR    "Cadena de 30 caracteres max" 29         -         
+0hA3F                CONST_HEX    0hA3F                5          -         
+0h1B                 CONST_HEX    0h1B                 4          -         
+show                 SHOW         -                    4          -         
+"ewr"                CONST_STR    "ewr"                5          -         
+99.999               CONST_FLOAT  99.999               6          -         
+>=                   MAYOR_IGUAL  -                    2          -         
+50                   CONST_INT    50                   2          -         
+&&                   AND          -                    2          -         
+<                    MENOR        -                    1          -         
+10                   CONST_INT    10                   2          -         
+"Condicion compleja verdadera" CONST_STR    "Condicion compleja verdadera" 30         -         
+"Condicion compleja falsa" CONST_STR    "Condicion compleja falsa" 26         -         
+REPEAT               PR_REPEAT    -                    6          -         
+-                    RESTA        -                    1          -         
+UNTIL                PR_UNTIL     -                    5          -         
+<=                   MENOR_IGUAL  -                    2          -         

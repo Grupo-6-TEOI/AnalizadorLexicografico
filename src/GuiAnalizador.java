@@ -76,6 +76,8 @@ public class GuiAnalizador {
             sintactico.parse();
             ingresarButton.setBackground(Color.green);
             System.out.println("Análisis completado sin errores.");
+            TablaDeSimbolo ts = TablaDeSimbolo.getInstance();
+            ts.writeToFile();
         } catch (Exception e) {
             System.out.println("error al analizar: " + e.toString());;
             ingresarButton.setBackground(Color.green);

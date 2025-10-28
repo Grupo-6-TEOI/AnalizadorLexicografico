@@ -246,7 +246,6 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
 }
 
 <<EOF>> {
-    tabla.writeToFile();
     return new Symbol(sym.EOF);
 }
 

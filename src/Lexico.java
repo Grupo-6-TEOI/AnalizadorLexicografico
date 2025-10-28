@@ -841,8 +841,7 @@ public class Lexico implements java_cup.runtime.Scanner {
         zzAtEOF = true;
             zzDoEOF();
               {
-                tabla.writeToFile();
-    return new Symbol(sym.EOF);
+                return new Symbol(sym.EOF);
               }
       }
       else {
