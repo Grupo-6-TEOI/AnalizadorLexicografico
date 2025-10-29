@@ -67,11 +67,11 @@ public class TablaDeSimbolo {
         if (parent != null && !parent.exists()) parent.mkdirs();
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(outFile))) {
-            bw.write(String.format("%-20s %-12s %-20s %-10s %-10s",
-                    "NOMBRE", "TOKEN", "VALOR", "LONGITUD", "TIPO"));
+            bw.write(String.format("%-32s %-20s %-10s %-30s %-10s",
+                    "NOMBRE", "TOKEN", "TIPO", "VALOR", "LONGITUD"));
             bw.newLine();
-            bw.write(String.format("%-20s %-12s %-20s %-10s %-10s",
-                    "------", "-----", "-----", "--------", "----"));
+            bw.write(String.format("%-32s %-20s %-10s %-30s %-10s",
+                    "------", "-----", "----", "-----", "--------"));
             bw.newLine();
 
             for (Simbolo s : symbolsByKey.values()) {
@@ -79,8 +79,21 @@ public class TablaDeSimbolo {
                 String valor = s.valor == null ? "-" : s.valor;
                 String tipo = s.tipo == null ? "-" : s.tipo;
 
-                bw.write(String.format("%-20s %-12s %-20s %-10s %-10s",
-                        s.nombre, s.token, valor, longitudStr, tipo));
+                if ("CONST_STR".equals(s.token) && valor.startsWith("\"") && valor.endsWith("\"")) {
+                    valor = valor.substring(1, valor.length() - 1);
+                }
+
+                if ("CONST_HEX".equals(s.token)) {
+                    try {
+                        int decimalValue = Integer.parseInt(valor.replace("0h", ""), 16);
+                        valor = String.valueOf(decimalValue);
+                    } catch (NumberFormatException e) {
+                        // si hay error, lo dejamos como está
+                    }
+                }
+
+                bw.write(String.format("%-32s %-20s %-10s %-30s %-10s",
+                        s.nombre, s.token, tipo,  valor, longitudStr));
                 bw.newLine();
             }
 
