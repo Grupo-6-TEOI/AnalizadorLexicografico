@@ -27,7 +27,7 @@ start with Programa;
 
 Programa ::=
       Declaraciones ProgramaPrincipal
-    | ProgramaPrincipal
+    | ProgramaPrincipal // todo: limitar a show sin id
     ;
 
 Declaraciones ::=
@@ -54,6 +54,8 @@ Tipo ::=
     | PR_STRING {: RESULT = "string";:}
     ;
 
+// todo: agregar final
+
 ProgramaPrincipal ::=
       PR_PROGRAM Sentencias
     ;
@@ -77,7 +79,7 @@ Asignacion ::=
 
 Expresion ::=
       Expresion SUMA Termino
-    | Expresion MOD Termino
+    | Expresion MOD  // todo: no hace falta
     | Expresion RESTA Termino
     | Termino
     ;
@@ -94,7 +96,6 @@ Factor ::=
     | CONST_INT
     | CONST_FLOAT
     | CONST_HEX
-    | CONST_STR
     ;
 
 BloqueFor ::=
@@ -112,7 +113,7 @@ BloqueRepeat ::=
     ;
 
 BloqueShow ::=
-      SHOW Expresion
+      SHOW Expresion // todo: cambiar a las constantes o id
     ;
 
 Condicion ::=
@@ -121,7 +122,7 @@ Condicion ::=
     | PAREN_A Condicion PAREN_C AND PAREN_A Condicion PAREN_C
     | PAREN_A Condicion PAREN_C OR PAREN_A Condicion PAREN_C
     | PAREN_A Condicion PAREN_C
-    ;
+    ; // todo: separar en condicion y comparacion
 
 OperadorComparacion ::=
       IGUAL
