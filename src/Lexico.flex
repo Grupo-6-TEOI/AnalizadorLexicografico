@@ -107,10 +107,6 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
               agregarSimbolo(yytext(), "PR_NEXT", null);
               return new Symbol(sym.PR_NEXT, yyline, yycolumn, yytext()); }
 
-"while"     { guiAnalizador.mostrarTexto("Token PR_WHILE encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_WHILE", null);
-              return new Symbol(sym.PR_WHILE, yyline, yycolumn, yytext()); }
-
 "if"|"IF"   { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_IF", null);
               return new Symbol(sym.PR_IF, yyline, yycolumn, yytext()); }
@@ -134,6 +130,10 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
 "PROGRAM.SECTION"     { guiAnalizador.mostrarTexto("Token PR_PROGRAM encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_PROGRAM", null);
               return new Symbol(sym.PR_PROGRAM, yyline, yycolumn, yytext()); }
+
+"ENDPROGRAM.SECTION"     { guiAnalizador.mostrarTexto("Token PR_ENDPROGRAM encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "PR_ENDPROGRAM", null);
+              return new Symbol(sym.PR_ENDPROGRAM, yyline, yycolumn, yytext()); }
 
 "int"|"INT"  { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_INT", null);
