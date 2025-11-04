@@ -23,9 +23,8 @@ PROGRAM.SECTION                  PR_PROGRAM           -          -              
 "Hola Mundo"                     CONST_STR            -          Hola Mundo                     12        
 0hFF                             CONST_HEX            -          255                            4         
 99999.99                         CONST_FLOAT          -          99999.99                       8         
-sdADaSjfla                       ID                   -          -                              10        
-%                                MOD                  -          -                              1         
-dfg                              ID                   -          -                              3         
+"@sdADaSjfla%dfg"                CONST_STR            -          @sdADaSjfla%dfg                17        
+ENDPROGRAM.SECTION               PR_ENDPROGRAM        -          -                              18        
 FOR                              PR_FOR               -          -                              3         
 al                               ID                   -          -                              2         
 IS                               PR_IS                -          -                              2         

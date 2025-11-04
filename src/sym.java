@@ -6,56 +6,57 @@
 /** CUP generated class containing symbol constants. */
 public class sym {
   /* terminals */
-  public static final int DISTINTO = 41;
-  public static final int SHOW = 27;
-  public static final int PR_INT = 24;
-  public static final int POT = 8;
-  public static final int PR_IS = 13;
+  public static final int DISTINTO = 42;
+  public static final int SHOW = 30;
+  public static final int PR_INT = 27;
+  public static final int POT = 11;
+  public static final int PR_IS = 16;
   public static final int MULT = 5;
-  public static final int PR_FOR = 12;
-  public static final int END_DEC_VAR = 11;
-  public static final int RESTA = 9;
-  public static final int PR_ENDIF = 20;
-  public static final int PR_IF = 18;
-  public static final int PR_ELSE = 19;
-  public static final int PR_WHILE = 17;
-  public static final int AND = 43;
-  public static final int NOT = 42;
-  public static final int PR_FLOAT = 25;
-  public static final int IGUAL = 36;
-  public static final int OR = 44;
+  public static final int PR_FOR = 15;
+  public static final int PR_ENDPROGRAM = 26;
+  public static final int END_DEC_VAR = 14;
+  public static final int RESTA = 7;
+  public static final int PR_ENDIF = 22;
+  public static final int PR_IF = 20;
+  public static final int PR_ELSE = 21;
+  public static final int PR_WHILE = 12;
+  public static final int AND = 44;
+  public static final int NOT = 43;
+  public static final int PR_FLOAT = 28;
+  public static final int IGUAL = 37;
+  public static final int OR = 45;
   public static final int DIV = 6;
-  public static final int DEC_VAR = 10;
+  public static final int DEC_VAR = 13;
   public static final int SUMA = 4;
-  public static final int CONST_FLOAT = 46;
+  public static final int CONST_FLOAT = 47;
   public static final int DATA_TYPE_ASSIGN = 2;
-  public static final int ID = 49;
+  public static final int ID = 50;
   public static final int EOF = 0;
-  public static final int PR_PROGRAM = 23;
-  public static final int PR_STEP = 15;
+  public static final int PR_PROGRAM = 25;
+  public static final int PR_STEP = 18;
   public static final int error = 1;
-  public static final int COMA = 35;
-  public static final int MENOR = 39;
-  public static final int PR_STRING = 26;
-  public static final int MOD = 7;
-  public static final int MAYOR = 40;
-  public static final int CLASP_C = 29;
-  public static final int CLASP_A = 28;
-  public static final int PUNTO = 34;
-  public static final int MAYOR_IGUAL = 38;
-  public static final int KEY_C = 33;
-  public static final int KEY_A = 32;
-  public static final int PR_RANGE = 14;
+  public static final int COMA = 9;
+  public static final int MENOR = 40;
+  public static final int PR_STRING = 29;
+  public static final int MOD = 8;
+  public static final int MAYOR = 41;
+  public static final int CLASP_C = 32;
+  public static final int CLASP_A = 31;
+  public static final int PUNTO = 10;
+  public static final int MAYOR_IGUAL = 39;
+  public static final int KEY_C = 36;
+  public static final int KEY_A = 35;
+  public static final int PR_RANGE = 17;
   public static final int ASIGN = 3;
-  public static final int PAREN_C = 31;
-  public static final int CONST_STR = 48;
-  public static final int PAREN_A = 30;
-  public static final int MENOR_IGUAL = 37;
-  public static final int PR_UNTIL = 22;
-  public static final int PR_REPEAT = 21;
-  public static final int PR_NEXT = 16;
-  public static final int CONST_INT = 47;
-  public static final int CONST_HEX = 45;
+  public static final int PAREN_C = 34;
+  public static final int CONST_STR = 49;
+  public static final int PAREN_A = 33;
+  public static final int MENOR_IGUAL = 38;
+  public static final int PR_UNTIL = 24;
+  public static final int PR_REPEAT = 23;
+  public static final int PR_NEXT = 19;
+  public static final int CONST_INT = 48;
+  public static final int CONST_HEX = 46;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
@@ -64,9 +65,12 @@ public class sym {
   "SUMA",
   "MULT",
   "DIV",
-  "MOD",
-  "POT",
   "RESTA",
+  "MOD",
+  "COMA",
+  "PUNTO",
+  "POT",
+  "PR_WHILE",
   "DEC_VAR",
   "END_DEC_VAR",
   "PR_FOR",
@@ -74,13 +78,13 @@ public class sym {
   "PR_RANGE",
   "PR_STEP",
   "PR_NEXT",
-  "PR_WHILE",
   "PR_IF",
   "PR_ELSE",
   "PR_ENDIF",
   "PR_REPEAT",
   "PR_UNTIL",
   "PR_PROGRAM",
+  "PR_ENDPROGRAM",
   "PR_INT",
   "PR_FLOAT",
   "PR_STRING",
@@ -91,8 +95,6 @@ public class sym {
   "PAREN_C",
   "KEY_A",
   "KEY_C",
-  "PUNTO",
-  "COMA",
   "IGUAL",
   "MENOR_IGUAL",
   "MAYOR_IGUAL",

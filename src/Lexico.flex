@@ -37,7 +37,7 @@ ID = {LETRA} ({LETRA}|{DIGITO}|_)*
 CONST_HEX = (0h[0-9A-Fa-f]+)
 CONST_INT = {DIGITO}+
 CONST_FLOAT = ({DIGITO}+"."{DIGITO}* | "."{DIGITO}+)
-CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO})*\"
+CONST_STR = \"({DIGITO}|{LETRA}|{ESPACIO}|"%"|"@")*\"
 COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPACIO})*"$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$"({LETRA}|{DIGITO}|{ESPACIO})*"*$"
 
 
@@ -87,6 +87,10 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
               agregarSimbolo(yytext(), "END_DEC_VAR", null);
               return new Symbol(sym.END_DEC_VAR, yyline, yycolumn, yytext()); }
 
+"ENDPROGRAM.SECTION"     { guiAnalizador.mostrarTexto("Token PR_ENDPROGRAM encontrado, Lexema "+ yytext());
+              agregarSimbolo(yytext(), "PR_ENDPROGRAM", null);
+              return new Symbol(sym.PR_ENDPROGRAM, yyline, yycolumn, yytext()); }
+
 "FOR"       { guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_FOR", null);
               return new Symbol(sym.PR_FOR, yyline, yycolumn, yytext()); }
@@ -131,9 +135,7 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
               agregarSimbolo(yytext(), "PR_PROGRAM", null);
               return new Symbol(sym.PR_PROGRAM, yyline, yycolumn, yytext()); }
 
-"ENDPROGRAM.SECTION"     { guiAnalizador.mostrarTexto("Token PR_ENDPROGRAM encontrado, Lexema "+ yytext());
-              agregarSimbolo(yytext(), "PR_ENDPROGRAM", null);
-              return new Symbol(sym.PR_ENDPROGRAM, yyline, yycolumn, yytext()); }
+
 
 "int"|"INT"  { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+ yytext());
               agregarSimbolo(yytext(), "PR_INT", null);

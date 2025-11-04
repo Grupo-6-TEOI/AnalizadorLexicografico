@@ -8,12 +8,12 @@ parser code {:
     }
 :};
 
-terminal DATA_TYPE_ASSIGN, ASIGN, SUMA, MULT, DIV, MOD, POT, RESTA;
+terminal DATA_TYPE_ASSIGN, ASIGN, SUMA, MULT, DIV, RESTA;
+terminal MOD,COMA,PUNTO,POT,PR_WHILE;
 terminal DEC_VAR, END_DEC_VAR;
-terminal PR_FOR, PR_IS, PR_RANGE, PR_STEP, PR_NEXT, PR_WHILE, PR_IF, PR_ELSE, PR_ENDIF, PR_REPEAT, PR_UNTIL, PR_PROGRAM;
+terminal PR_FOR, PR_IS, PR_RANGE, PR_STEP, PR_NEXT, PR_IF, PR_ELSE, PR_ENDIF, PR_REPEAT, PR_UNTIL, PR_PROGRAM,PR_ENDPROGRAM;
 terminal PR_INT, PR_FLOAT, PR_STRING, SHOW;
 terminal CLASP_A, CLASP_C, PAREN_A, PAREN_C, KEY_A, KEY_C;
-terminal PUNTO, COMA;
 terminal IGUAL, MENOR_IGUAL, MAYOR_IGUAL, MENOR, MAYOR, DISTINTO, NOT, AND, OR;
 terminal CONST_HEX, CONST_FLOAT, CONST_INT, CONST_STR;
 terminal Symbol ID;
@@ -21,13 +21,13 @@ terminal Symbol ID;
 
 non terminal Programa, Declaraciones, Declaracion, Sentencias, Sentencia, Asignacion, Expresion, Termino, Factor,ListaDeclaraciones;
 non terminal String Tipo;
-non terminal BloqueFor, BloqueIf, BloqueRepeat, BloqueShow, Condicion, OperadorComparacion, OperadorAritmetico, ProgramaPrincipal;
+non terminal BloqueFor,ProgramaSecundario,Comparacion,BloqueShowEspecial,ExpresionShowEspecial,ExpresionShow, ShowsEspeciales, BloqueIf, BloqueRepeat, BloqueShow, Condicion, OperadorComparacion, ProgramaPrincipal;
 
 start with Programa;
 
 Programa ::=
-      Declaraciones ProgramaPrincipal
-    | ProgramaPrincipal // todo: limitar a show sin id
+         Declaraciones ProgramaPrincipal
+    | ProgramaSecundario
     ;
 
 Declaraciones ::=
@@ -49,15 +49,34 @@ Declaracion ::= ID:id DATA_TYPE_ASSIGN Tipo:t {:
 
 
 Tipo ::=
-      PR_INT    {: RESULT = "int";   :}
+     PR_INT    {: RESULT = "int";   :}
     | PR_FLOAT  {: RESULT = "float"; :}
     | PR_STRING {: RESULT = "string";:}
     ;
 
-// todo: agregar final
 
 ProgramaPrincipal ::=
-      PR_PROGRAM Sentencias
+    PR_PROGRAM Sentencias PR_ENDPROGRAM
+    ;
+
+ProgramaSecundario ::=
+    PR_PROGRAM ShowsEspeciales PR_ENDPROGRAM
+    ;
+
+ShowsEspeciales ::=
+    ShowsEspeciales BloqueShowEspecial
+    | BloqueShowEspecial
+    ;
+
+BloqueShowEspecial ::=
+     SHOW ExpresionShowEspecial
+    ;
+
+ExpresionShowEspecial ::=
+     CONST_STR
+    | CONST_INT
+    | CONST_FLOAT
+    | CONST_HEX
     ;
 
 Sentencias ::=
@@ -79,7 +98,6 @@ Asignacion ::=
 
 Expresion ::=
       Expresion SUMA Termino
-    | Expresion MOD  // todo: no hace falta
     | Expresion RESTA Termino
     | Termino
     ;
@@ -96,6 +114,7 @@ Factor ::=
     | CONST_INT
     | CONST_FLOAT
     | CONST_HEX
+    | CONST_STR
     ;
 
 BloqueFor ::=
@@ -112,17 +131,29 @@ BloqueRepeat ::=
       PR_REPEAT Sentencias PR_UNTIL PAREN_A Condicion PAREN_C
     ;
 
+ExpresionShow ::=
+     CONST_STR
+    | ID
+    | CONST_INT
+    | CONST_FLOAT
+    | CONST_HEX
+    ;
+
 BloqueShow ::=
-      SHOW Expresion // todo: cambiar a las constantes o id
+      SHOW ExpresionShow
     ;
 
 Condicion ::=
-      Expresion OperadorComparacion Expresion
-    | NOT PAREN_A Condicion PAREN_C
-    | PAREN_A Condicion PAREN_C AND PAREN_A Condicion PAREN_C
-    | PAREN_A Condicion PAREN_C OR PAREN_A Condicion PAREN_C
-    | PAREN_A Condicion PAREN_C
-    ; // todo: separar en condicion y comparacion
+     NOT PAREN_A Comparacion PAREN_C
+    | PAREN_A Comparacion PAREN_C AND PAREN_A Comparacion PAREN_C
+    | PAREN_A Comparacion PAREN_C OR PAREN_A Comparacion PAREN_C
+    | PAREN_A Comparacion PAREN_C
+    | Comparacion
+    ;
+
+Comparacion ::=
+    Expresion OperadorComparacion Expresion
+    ;
 
 OperadorComparacion ::=
       IGUAL
@@ -133,11 +164,3 @@ OperadorComparacion ::=
     | DISTINTO
     ;
 
-OperadorAritmetico ::=
-      SUMA
-    | MULT
-    | DIV
-    | MOD
-    | POT
-    | RESTA
-    ;
