@@ -26,6 +26,7 @@ public class TablaDeSimbolo {
         public void setType(String tipo) {
             this.tipo = tipo;
         }
+
     }
 
     private final Map<String, Simbolo> symbolsByKey;

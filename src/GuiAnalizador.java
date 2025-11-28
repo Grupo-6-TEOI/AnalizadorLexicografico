@@ -1,5 +1,3 @@
-import java_cup.runtime.Symbol;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -17,6 +15,9 @@ public class GuiAnalizador {
     private JScrollPane scrollOutput;
     private JButton abrirArchivoButton;
     private JLabel inputLabel;
+    private JTextArea outputSintactico;
+    private JLabel Analisis_Sintactico;
+
     Lexico lexer;
 
     public GuiAnalizador(){
@@ -62,25 +63,22 @@ public class GuiAnalizador {
     private void ingresarTexto(){
         try {
             Reader reader = new StringReader(input.getText());
-            lexer = new Lexico(reader);
+            Lexico lexer= new Lexico(reader);
             lexer.setGui(this);
             output.setText("");
+            outputSintactico.setText("--- INICIANDO ANALISIS SINTACTICO ---\n");
 
-//            Symbol s = lexer.next_token();
-//            while (s.sym != sym.EOF) {
-//                System.out.println(s.sym + " -> " + s.value + " - " + s.left + " - " + s.right);
-//                s = lexer.next_token();
-//            }
+            // SintaticoTraceable permite imprimir resultado en ventana
+            SintacticoTraceable sintactico = new SintacticoTraceable(lexer, this);
+            sintactico.debug_parse();
 
-            Sintactico sintactico = new Sintactico(lexer);
-            sintactico.parse();
-            ingresarButton.setBackground(Color.green);
-            System.out.println("Análisis completado sin errores.");
+            ingresarButton.setBackground(Color.green); // Cambiar a verde en caso de exito
+            System.out.println("Analisis completado sin errores.");
             TablaDeSimbolo ts = TablaDeSimbolo.getInstance();
             ts.writeToFile();
         } catch (Exception e) {
-            System.out.println("error al analizar: " + e.toString());;
-            ingresarButton.setBackground(Color.green);
+            System.out.println("error al analizar: " + e.toString());
+            ingresarButton.setBackground(Color.red); // Cambiar a rojo en caso de error
             e.printStackTrace();
         }
     }
@@ -88,6 +86,8 @@ public class GuiAnalizador {
     public void mostrarTexto(String texto){
         output.append(texto + "\n");
     }
+
+    public void mostrarTextoSintactico(String texto) {outputSintactico.append(texto+"\n");}
 
     public JPanel getVentana(){
         return ventana;

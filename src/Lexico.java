@@ -865,238 +865,238 @@ public class Lexico implements java_cup.runtime.Scanner {
           // fall through
           case 53: break;
           case 3:
-            { guiAnalizador.mostrarTexto("Token NOT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("NOT");
               agregarSimbolo(yytext(), "NOT", null);
               return new Symbol(sym.NOT, yyline, yycolumn, yytext());
             }
           // fall through
           case 54: break;
           case 4:
-            { guiAnalizador.mostrarTexto("Token MOD encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("MOD");
               agregarSimbolo(yytext(), "MOD", null);
               return new Symbol(sym.MOD, yyline, yycolumn, yytext());
             }
           // fall through
           case 55: break;
           case 5:
-            { guiAnalizador.mostrarTexto("Token PAREN_A encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PAREN_A");
               agregarSimbolo(yytext(), "PAREN_A", null);
               return new Symbol(sym.PAREN_A, yyline, yycolumn, yytext());
             }
           // fall through
           case 56: break;
           case 6:
-            { guiAnalizador.mostrarTexto("Token PAREN_C encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PAREN_C");
               agregarSimbolo(yytext(), "PAREN_C", null);
               return new Symbol(sym.PAREN_C, yyline, yycolumn, yytext());
             }
           // fall through
           case 57: break;
           case 7:
-            { guiAnalizador.mostrarTexto("Token MULT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("MULT");
               agregarSimbolo(yytext(), "MULT", null);
               return new Symbol(sym.MULT, yyline, yycolumn, yytext());
             }
           // fall through
           case 58: break;
           case 8:
-            { guiAnalizador.mostrarTexto("Token SUMA encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("SUMA");
               agregarSimbolo(yytext(), "SUMA", null);
               return new Symbol(sym.SUMA, yyline, yycolumn, yytext());
             }
           // fall through
           case 59: break;
           case 9:
-            { guiAnalizador.mostrarTexto("Token COMA encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("COMA");
               agregarSimbolo(yytext(), "COMA", null);
               return new Symbol(sym.COMA, yyline, yycolumn, yytext());
             }
           // fall through
           case 60: break;
           case 10:
-            { guiAnalizador.mostrarTexto("Token RESTA encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("RESTA");
               agregarSimbolo(yytext(), "RESTA", null);
               return new Symbol(sym.RESTA, yyline, yycolumn, yytext());
             }
           // fall through
           case 61: break;
           case 11:
-            { guiAnalizador.mostrarTexto("Token PUNTO encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PUNTO");
               agregarSimbolo(yytext(), "PUNTO", null);
               return new Symbol(sym.PUNTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 62: break;
           case 12:
-            { guiAnalizador.mostrarTexto("Token DIV encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("DIV");
               agregarSimbolo(yytext(), "DIV", null);
               return new Symbol(sym.DIV, yyline, yycolumn, yytext());
             }
           // fall through
           case 63: break;
           case 13:
-            { guiAnalizador.mostrarTexto("Token CONST_INT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("CONST_INT");
               agregarSimbolo(yytext(), "CONST_INT", yytext());
               return new Symbol(sym.CONST_INT, yyline, yycolumn, yytext());
             }
           // fall through
           case 64: break;
           case 14:
-            { guiAnalizador.mostrarTexto("Token DATA_TYPE_ASSIGN encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("DATA_TYPE_ASSIGN");
               agregarSimbolo(yytext(), "DATA_TYPE_ASSIGN", null);
                return new Symbol(sym.DATA_TYPE_ASSIGN, yyline, yycolumn, yytext());
             }
           // fall through
           case 65: break;
           case 15:
-            { guiAnalizador.mostrarTexto("Token MENOR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("MENOR");
               agregarSimbolo(yytext(), "MENOR", null);
               return new Symbol(sym.MENOR, yyline, yycolumn, yytext());
             }
           // fall through
           case 66: break;
           case 16:
-            { guiAnalizador.mostrarTexto("Token ASIGN encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("ASIGN");
               agregarSimbolo(yytext(), "ASIGN", null);
               return new Symbol(sym.ASIGN, yyline, yycolumn, yytext());
             }
           // fall through
           case 67: break;
           case 17:
-            { guiAnalizador.mostrarTexto("Token MAYOR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("MAYOR");
               agregarSimbolo(yytext(), "MAYOR", null);
               return new Symbol(sym.MAYOR, yyline, yycolumn, yytext());
             }
           // fall through
           case 68: break;
           case 18:
-            { guiAnalizador.mostrarTexto("Token ID encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("ID");
               agregarSimbolo(yytext(), "ID", null);
               return new Symbol(sym.ID, yyline, yycolumn, yytext());
             }
           // fall through
           case 69: break;
           case 19:
-            { guiAnalizador.mostrarTexto("Token CLASP_A encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("CLASP_A");
               agregarSimbolo(yytext(), "CLASP_A", null);
               return new Symbol(sym.CLASP_A, yyline, yycolumn, yytext());
             }
           // fall through
           case 70: break;
           case 20:
-            { guiAnalizador.mostrarTexto("Token CLASP_C encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("CLASP_C");
               agregarSimbolo(yytext(), "CLASP_C", null);
               return new Symbol(sym.CLASP_C, yyline, yycolumn, yytext());
             }
           // fall through
           case 71: break;
           case 21:
-            { guiAnalizador.mostrarTexto("Token POT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("POT");
               agregarSimbolo(yytext(), "POT", null);
               return new Symbol(sym.POT, yyline, yycolumn, yytext());
             }
           // fall through
           case 72: break;
           case 22:
-            { guiAnalizador.mostrarTexto("Token KEY_A encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("KEY_A");
               agregarSimbolo(yytext(), "KEY_A", null);
               return new Symbol(sym.KEY_A, yyline, yycolumn, yytext());
             }
           // fall through
           case 73: break;
           case 23:
-            { guiAnalizador.mostrarTexto("Token KEY_C encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("KEY_C");
               agregarSimbolo(yytext(), "KEY_C", null);
               return new Symbol(sym.KEY_C, yyline, yycolumn, yytext());
             }
           // fall through
           case 74: break;
           case 24:
-            { guiAnalizador.mostrarTexto("Token DISTINTO encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("DISTINTO");
               agregarSimbolo(yytext(), "DISTINTO", null);
               return new Symbol(sym.DISTINTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 75: break;
           case 25:
-            { guiAnalizador.mostrarTexto("Token CONST_STR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("CONST_STR");
               agregarSimbolo(yytext(), "CONST_STR", yytext());
               return new Symbol(sym.CONST_STR, yyline, yycolumn, yytext());
             }
           // fall through
           case 76: break;
           case 26:
-            { guiAnalizador.mostrarTexto("Token AND encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("AND");
               agregarSimbolo(yytext(), "AND", null);
               return new Symbol(sym.AND, yyline, yycolumn, yytext());
             }
           // fall through
           case 77: break;
           case 27:
-            { guiAnalizador.mostrarTexto("Token CONST_FLOAT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("CONST_FLOAT");
                 agregarSimbolo(yytext(), "CONST_FLOAT", yytext());
               return new Symbol(sym.CONST_FLOAT, yyline, yycolumn, yytext());
             }
           // fall through
           case 78: break;
           case 28:
-            { guiAnalizador.mostrarTexto("Token MENOR_IGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("MENOR_IGUAL");
               agregarSimbolo(yytext(), "MENOR_IGUAL", null);
               return new Symbol(sym.MENOR_IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
           case 79: break;
           case 29:
-            { guiAnalizador.mostrarTexto("Token IGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("IGUAL");
               agregarSimbolo(yytext(), "IGUAL", null);
               return new Symbol(sym.IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
           case 80: break;
           case 30:
-            { guiAnalizador.mostrarTexto("Token MAYOR_IGUAL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("MAYOR_IGUAL");
               agregarSimbolo(yytext(), "MAYOR_IGUAL", null);
               return new Symbol(sym.MAYOR_IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
           case 81: break;
           case 31:
-            { guiAnalizador.mostrarTexto("Token PR_IF encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_IF");
               agregarSimbolo(yytext(), "PR_IF", null);
               return new Symbol(sym.PR_IF, yyline, yycolumn, yytext());
             }
           // fall through
           case 82: break;
           case 32:
-            { guiAnalizador.mostrarTexto("Token PR_IS encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_IS");
               agregarSimbolo(yytext(), "PR_IS", null);
               return new Symbol(sym.PR_IS, yyline, yycolumn, yytext());
             }
           // fall through
           case 83: break;
           case 33:
-            { guiAnalizador.mostrarTexto("Token OR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("OR");
               agregarSimbolo(yytext(), "OR", null);
               return new Symbol(sym.OR, yyline, yycolumn, yytext());
             }
           // fall through
           case 84: break;
           case 34:
-            { guiAnalizador.mostrarTexto("Token CONST_HEX encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("CONST_HEX");
               agregarSimbolo(yytext(), "CONST_HEX", yytext());
               return new Symbol(sym.CONST_HEX, yyline, yycolumn, yytext());
             }
           // fall through
           case 85: break;
           case 35:
-            { guiAnalizador.mostrarTexto("Token PR_FOR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_FOR");
               agregarSimbolo(yytext(), "PR_FOR", null);
               return new Symbol(sym.PR_FOR, yyline, yycolumn, yytext());
             }
           // fall through
           case 86: break;
           case 36:
-            { guiAnalizador.mostrarTexto("Token PR_INT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_INT");
               agregarSimbolo(yytext(), "PR_INT", null);
               return new Symbol(sym.PR_INT, yyline, yycolumn, yytext());
             }
@@ -1108,98 +1108,98 @@ public class Lexico implements java_cup.runtime.Scanner {
           // fall through
           case 88: break;
           case 38:
-            { guiAnalizador.mostrarTexto("Token PR_ELSE encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_ELSE");
                 agregarSimbolo(yytext(), "PR_ELSE", null);
               return new Symbol(sym.PR_ELSE, yyline, yycolumn, yytext());
             }
           // fall through
           case 89: break;
           case 39:
-            { guiAnalizador.mostrarTexto("Token PR_NEXT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_NEXT");
               agregarSimbolo(yytext(), "PR_NEXT", null);
               return new Symbol(sym.PR_NEXT, yyline, yycolumn, yytext());
             }
           // fall through
           case 90: break;
           case 40:
-            { guiAnalizador.mostrarTexto("Token SHOW encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("SHOW");
               agregarSimbolo(yytext(), "SHOW", null);
               return new Symbol(sym.SHOW, yyline, yycolumn, yytext());
             }
           // fall through
           case 91: break;
           case 41:
-            { guiAnalizador.mostrarTexto("Token PR_STEP encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_STEP");
               agregarSimbolo(yytext(), "PR_STEP", null);
               return new Symbol(sym.PR_STEP, yyline, yycolumn, yytext());
             }
           // fall through
           case 92: break;
           case 42:
-            { guiAnalizador.mostrarTexto("Token PR_ENDIF encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_ENDIF");
               agregarSimbolo(yytext(), "PR_ENDIF", null);
               return new Symbol(sym.PR_ENDIF, yyline, yycolumn, yytext());
             }
           // fall through
           case 93: break;
           case 43:
-            { guiAnalizador.mostrarTexto("Token PR_FLOAT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_FLOAT");
               agregarSimbolo(yytext(), "PR_FLOAT", null);
               return new Symbol(sym.PR_FLOAT, yyline, yycolumn, yytext());
             }
           // fall through
           case 94: break;
           case 44:
-            { guiAnalizador.mostrarTexto("Token PR_RANGE encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_RANGE");
               agregarSimbolo(yytext(), "PR_RANGE", null);
               return new Symbol(sym.PR_RANGE, yyline, yycolumn, yytext());
             }
           // fall through
           case 95: break;
           case 45:
-            { guiAnalizador.mostrarTexto("Token PR_UNTIL encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_UNTIL");
               agregarSimbolo(yytext(), "PR_UNTIL", null);
               return new Symbol(sym.PR_UNTIL, yyline, yycolumn, yytext());
             }
           // fall through
           case 96: break;
           case 46:
-            { guiAnalizador.mostrarTexto("Token DEC_VAR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("DEC_VAR");
               agregarSimbolo(yytext(), "DEC_VAR", null);
               return new Symbol(sym.DEC_VAR, yyline, yycolumn, yytext());
             }
           // fall through
           case 97: break;
           case 47:
-            { guiAnalizador.mostrarTexto("Token PR_REPEAT encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_REPEAT");
               agregarSimbolo(yytext(), "PR_REPEAT", null);
               return new Symbol(sym.PR_REPEAT, yyline, yycolumn, yytext());
             }
           // fall through
           case 98: break;
           case 48:
-            { guiAnalizador.mostrarTexto("Token PR_STRING encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_STRING");
               agregarSimbolo(yytext(), "PR_STRING", null);
               return new Symbol(sym.PR_STRING, yyline, yycolumn, yytext());
             }
           // fall through
           case 99: break;
           case 49:
-            { guiAnalizador.mostrarTexto("Token END_DEC_VAR encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("END_DEC_VAR");
               agregarSimbolo(yytext(), "END_DEC_VAR", null);
               return new Symbol(sym.END_DEC_VAR, yyline, yycolumn, yytext());
             }
           // fall through
           case 100: break;
           case 50:
-            { guiAnalizador.mostrarTexto("Token PR_PROGRAM encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_PROGRAM");
               agregarSimbolo(yytext(), "PR_PROGRAM", null);
               return new Symbol(sym.PR_PROGRAM, yyline, yycolumn, yytext());
             }
           // fall through
           case 101: break;
           case 51:
-            { guiAnalizador.mostrarTexto("Token PR_ENDPROGRAM encontrado, Lexema "+ yytext());
+            { guiAnalizador.mostrarTexto("PR_ENDPROGRAM");
               agregarSimbolo(yytext(), "PR_ENDPROGRAM", null);
               return new Symbol(sym.PR_ENDPROGRAM, yyline, yycolumn, yytext());
             }
