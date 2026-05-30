@@ -13,6 +13,7 @@ import java.io.*;
 
 %{
     // ===== Código Java insertado dentro de la clase generada =====
+    // TODO: controlar la cantidad de caracteres
 
     // Instancia única de la tabla de símbolos (Singleton)
     private final TablaDeSimbolo tabla = TablaDeSimbolo.getInstance();
@@ -252,4 +253,4 @@ COMENTARIO = "$*"({LETRA}|{DIGITO}|{ESPACIO})*"*$" | "$*"({LETRA}|{DIGITO}|{ESPA
 }
 
 
-[^]         { /* cualquier otro carácter desconocido se ignora */ }
+[^]         { /* //TODO: control de errores */ }
